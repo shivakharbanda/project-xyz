@@ -8,16 +8,21 @@ document.addEventListener('DOMContentLoaded', function() {
   const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
   const navLinks = document.querySelector('.nav-links');
 
-  if (mobileMenuToggle) {
+  if (mobileMenuToggle && navLinks) {
     mobileMenuToggle.addEventListener('click', function() {
-      navLinks.classList.toggle('active');
+      navLinks.classList.toggle('hidden');
+      navLinks.classList.toggle('flex');
 
       // Toggle icon between hamburger and X
-      const icon = this.querySelector('i') || this;
-      if (navLinks.classList.contains('active')) {
-        icon.textContent = '✕';
+      const svg = this.querySelector('svg');
+      const path = svg.querySelector('path');
+
+      if (navLinks.classList.contains('flex')) {
+        // Show X icon
+        path.setAttribute('d', 'M6 18L18 6M6 6l12 12');
       } else {
-        icon.textContent = '☰';
+        // Show hamburger icon
+        path.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
       }
     });
 
@@ -25,8 +30,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const links = navLinks.querySelectorAll('a');
     links.forEach(link => {
       link.addEventListener('click', function() {
-        navLinks.classList.remove('active');
-        mobileMenuToggle.textContent = '☰';
+        navLinks.classList.add('hidden');
+        navLinks.classList.remove('flex');
+
+        // Reset to hamburger icon
+        const svg = mobileMenuToggle.querySelector('svg');
+        const path = svg.querySelector('path');
+        path.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
       });
     });
 
@@ -35,9 +45,14 @@ document.addEventListener('DOMContentLoaded', function() {
       const isClickInsideNav = navLinks.contains(event.target);
       const isClickOnToggle = mobileMenuToggle.contains(event.target);
 
-      if (!isClickInsideNav && !isClickOnToggle && navLinks.classList.contains('active')) {
-        navLinks.classList.remove('active');
-        mobileMenuToggle.textContent = '☰';
+      if (!isClickInsideNav && !isClickOnToggle && navLinks.classList.contains('flex')) {
+        navLinks.classList.add('hidden');
+        navLinks.classList.remove('flex');
+
+        // Reset to hamburger icon
+        const svg = mobileMenuToggle.querySelector('svg');
+        const path = svg.querySelector('path');
+        path.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
       }
     });
   }
