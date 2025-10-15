@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about social.i Consultancy - a boutique creative marketing agency transforming ideas into purposeful brands.">
+    <title>About Us - social.i Consultancy</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#e25b32",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#211511",
+                    },
+                    fontFamily: {
+                        display: ["Work Sans"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        lg: "1rem",
+                        xl: "1.5rem",
+                        full: "9999px",
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+    <div class="flex h-auto min-h-screen w-full flex-col">
+        <!-- Header -->
+        <header class="sticky top-0 z-10 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+            <div class="container mx-auto flex items-center justify-between px-6 py-4">
+                <div class="flex items-center gap-3">
+                    <img src="assets/images/brand_logo.avif" alt="social.i" class="h-10 w-10">
+                    <h2 class="text-xl font-bold text-gray-900 dark:text-white">social.i</h2>
+                </div>
+                <nav class="hidden items-center gap-8 md:flex">
+                    <a class="text-sm font-medium hover:text-primary" href="index.html">Home</a>
+                    <a class="text-sm font-medium hover:text-primary" href="services.html">Services</a>
+                    <a class="text-sm font-medium text-primary" href="about.html">About</a>
+                    <a class="text-sm font-medium hover:text-primary" href="insights.html">Insights</a>
+                    <a class="text-sm font-medium hover:text-primary" href="contact.html">Contact</a>
+                </nav>
+                <button class="hidden rounded-lg bg-primary px-5 py-2.5 text-sm font-bold text-white shadow-md transition-transform hover:scale-105 md:block">
+                    <a href="contact.html">Get Started</a>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container mx-auto flex-grow px-6 py-12 md:py-24">
+            <!-- Hero -->
+            <div class="mx-auto max-w-4xl">
+                <section class="mb-16 text-center md:mb-24">
+                    <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white md:text-6xl">About Us</h1>
+                    <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
+                        At social.i, we're more than just a brand strategy agency; we're architects of purpose-driven brands. Our mission is to elevate brand awareness, expand organic reach, and secure impactful media coverage for small-to-mid-sized businesses with a meaningful story to tell.
+                    </p>
+                </section>
+
+                <!-- Team Section -->
+                <section class="mb-16 md:mb-24">
+                    <h2 class="mb-8 text-center text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">Our Team</h2>
+                    <p class="mb-12 text-center text-lg text-gray-600 dark:text-gray-400">
+                        Meet the passionate individuals who bring our vision to life.
+                    </p>
+                    <div class="grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-4 lg:gap-x-8">
+                        <div class="text-center">
+                            <div class="mx-auto h-32 w-32 rounded-full bg-cover bg-center"
+                                 style='background-image: url("https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&auto=format");'></div>
+                            <h3 class="mt-4 text-lg font-semibold text-gray-900 dark:text-white">Sarah Chen</h3>
+                            <p class="text-primary">Founder & CEO</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="mx-auto h-32 w-32 rounded-full bg-cover bg-center"
+                                 style='background-image: url("https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop&auto=format");'></div>
+                            <h3 class="mt-4 text-lg font-semibold text-gray-900 dark:text-white">David Lee</h3>
+                            <p class="text-primary">Creative Director</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="mx-auto h-32 w-32 rounded-full bg-cover bg-center"
+                                 style='background-image: url("https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&auto=format");'></div>
+                            <h3 class="mt-4 text-lg font-semibold text-gray-900 dark:text-white">Emily Wong</h3>
+                            <p class="text-primary">Strategy Lead</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="mx-auto h-32 w-32 rounded-full bg-cover bg-center"
+                                 style='background-image: url("https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&auto=format");'></div>
+                            <h3 class="mt-4 text-lg font-semibold text-gray-900 dark:text-white">Michael Tan</h3>
+                            <p class="text-primary">Marketing Manager</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Values Section -->
+                <section class="mb-16 md:mb-24">
+                    <h2 class="mb-8 text-center text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">Our Values</h2>
+                    <p class="mb-12 text-center text-lg text-gray-600 dark:text-gray-400">
+                        Our core values guide every project we undertake.
+                    </p>
+                    <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+                        <div class="rounded-lg bg-background-light p-8 text-center shadow-sm dark:bg-background-dark/50">
+                            <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+                                <svg fill="currentColor" height="32" viewBox="0 0 256 256" width="32" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M119.76,217.94A8,8,0,0,1,112,224a8.13,8.13,0,0,1-2-.24l-32-8a8,8,0,0,1-2.5-1.11l-24-16a8,8,0,1,1,8.88-13.31l22.84,15.23,30.66,7.67A8,8,0,0,1,119.76,217.94Zm132.69-96.46a15.89,15.89,0,0,1-8,9.25l-23.68,11.84-55.08,55.09a8,8,0,0,1-7.6,2.1l-64-16a8.06,8.06,0,0,1-2.71-1.25L35.86,142.87,11.58,130.73a16,16,0,0,1-7.16-21.46L29.27,59.58h0a16,16,0,0,1,21.46-7.16l22.06,11,53-15.14a8,8,0,0,1,4.4,0l53,15.14,22.06-11a16,16,0,0,1,21.46,7.16l24.85,49.69A15.9,15.9,0,0,1,252.45,121.48Zm-46.18,12.94L179.06,80H147.24L104,122c12.66,8.09,32.51,10.32,50.32-7.63a8,8,0,0,1,10.68-.61l34.41,27.57Zm-187.54-18,17.69,8.85L61.27,75.58,43.58,66.73ZM188,152.66l-27.71-22.19c-19.54,16-44.35,18.11-64.91,5a16,16,0,0,1-2.72-24.82.6.6,0,0,1,.08-.08L137.6,67.06,128,64.32,77.58,78.73,50.21,133.46l49.2,35.15,58.14,14.53Zm49.24-36.24L212.42,66.73l-17.69,8.85,24.85,49.69Z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Integrity</h3>
+                        </div>
+                        <div class="rounded-lg bg-background-light p-8 text-center shadow-sm dark:bg-background-dark/50">
+                            <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+                                <svg fill="currentColor" height="32" viewBox="0 0 256 256" width="32" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M176,232a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,232Zm40-128a87.55,87.55,0,0,1-33.64,69.21A16.24,16.24,0,0,0,176,186v6a16,16,0,0,1-16,16H96a16,16,0,0,1-16-16v-6a16,16,0,0,0-6.23-12.66A87.59,87.59,0,0,1,40,104.49C39.74,56.83,78.26,17.14,125.88,16A88,88,0,0,1,216,104Zm-16,0a72,72,0,0,0-73.74-72c-39,.92-70.47,33.39-70.26,72.39a71.65,71.65,0,0,0,27.64,56.3A32,32,0,0,1,96,186v6h64v-6a32.15,32.15,0,0,1,12.47-25.35A71.65,71.65,0,0,0,200,104Zm-16.11-9.34a57.6,57.6,0,0,0-46.56-46.55,8,8,0,0,0-2.66,15.78c16.57,2.79,30.63,16.85,33.44,33.45A8,8,0,0,0,176,104a9,9,0,0,0,1.35-.11A8,8,0,0,0,183.89,94.66Z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Innovation</h3>
+                        </div>
+                        <div class="rounded-lg bg-background-light p-8 text-center shadow-sm dark:bg-background-dark/50">
+                            <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+                                <svg fill="currentColor" height="32" viewBox="0 0 256 256" width="32" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M221.87,83.16A104.1,104.1,0,1,1,195.67,49l22.67-22.68a8,8,0,0,1,11.32,11.32l-96,96a8,8,0,0,1-11.32-11.32l27.72-27.72a40,40,0,1,0,17.87,31.09,8,8,0,1,1,16-.9,56,56,0,1,1-22.38-41.65L184.3,60.39a87.88,87.88,0,1,0,23.13,29.67,8,8,0,0,1,14.44-6.9Z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Results-Driven</h3>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Process Section -->
+                <section class="mb-16 md:mb-24">
+                    <h2 class="mb-8 text-center text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">Our Process</h2>
+                    <p class="mb-12 text-center text-lg text-gray-600 dark:text-gray-400">
+                        Our unique process ensures a tailored approach to every brand we work with.
+                    </p>
+                    <div class="relative">
+                        <div aria-hidden="true" class="absolute left-8 top-0 h-full w-0.5 bg-primary/20"></div>
+                        <div class="space-y-12">
+                            <div class="relative flex items-start gap-6">
+                                <div class="z-10 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full bg-primary text-white">
+                                    <svg fill="currentColor" height="32" viewBox="0 0 256 256" width="32" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">Discovery & Research</h3>
+                                    <p class="mt-2 text-gray-600 dark:text-gray-400">We dive deep to understand your brand, audience, and goals.</p>
+                                </div>
+                            </div>
+                            <div class="relative flex items-start gap-6">
+                                <div class="z-10 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full bg-primary text-white">
+                                    <svg fill="currentColor" height="32" viewBox="0 0 256 256" width="32" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M216,40H136V24a8,8,0,0,0-16,0V40H40A16,16,0,0,0,24,56V176a16,16,0,0,0,16,16H79.36L57.75,219a8,8,0,0,0,12.5,10l29.59-37h56.32l29.59,37a8,8,0,1,0,12.5-10l-21.61-27H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,136H40V56H216V176ZM104,120v24a8,8,0,0,1-16,0V120a8,8,0,0,1,16,0Zm32-16v40a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm32-16v56a8,8,0,0,1-16,0V88a8,8,0,0,1,16,0Z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">Strategy & Planning</h3>
+                                    <p class="mt-2 text-gray-600 dark:text-gray-400">We craft a comprehensive brand strategy and a roadmap for success.</p>
+                                </div>
+                            </div>
+                            <div class="relative flex items-start gap-6">
+                                <div class="z-10 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full bg-primary text-white">
+                                    <svg fill="currentColor" height="32" viewBox="0 0 256 256" width="32" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M227.31,73.37,182.63,28.68a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H92.69A15.86,15.86,0,0,0,104,219.31L227.31,96a16,16,0,0,0,0-22.63ZM92.69,208H48V163.31l88-88L180.69,120ZM192,108.68,147.31,64l24-24L216,84.68Z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">Creative Development</h3>
+                                    <p class="mt-2 text-gray-600 dark:text-gray-400">Our team brings your brand to life with stunning visuals and compelling storytelling.</p>
+                                </div>
+                            </div>
+                            <div class="relative flex items-start gap-6">
+                                <div class="z-10 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full bg-primary text-white">
+                                    <svg fill="currentColor" height="32" viewBox="0 0 256 256" width="32" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M103.77,185.94C103.38,187.49,93.63,224,40,224a8,8,0,0,1-8-8c0-53.63,36.51-63.38,38.06-63.77a8,8,0,0,1,3.88,15.53c-.9.25-22.42,6.54-25.56,39.86C81.7,204.48,88,183,88.26,182a8,8,0,0,1,15.51,4Zm93-67.4L192,123.31v58.33A15.91,15.91,0,0,1,187.32,193L153,227.3A15.91,15.91,0,0,1,141.7,232a16.11,16.11,0,0,1-5.1-.83,15.94,15.94,0,0,1-10.78-12.92l-5.37-38.49L76.24,135.55l-38.47-5.37A16,16,0,0,1,28.7,103L63,68.68A15.91,15.91,0,0,1,74.36,64h58.33l4.77-4.77c26.68-26.67,58.83-27.82,71.41-27.07a16,16,0,0,1,15,15C224.6,59.71,223.45,91.86,196.78,118.54ZM40,114.34l37.15,5.18L116.69,80H74.36ZM91.32,128,128,164.68l57.45-57.45a76.46,76.46,0,0,0,22.42-59.16,76.65,76.65,0,0,0-59.11,22.47ZM176,139.31l-39.53,39.53L141.67,216,176,181.64Z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">Implementation & Launch</h3>
+                                    <p class="mt-2 text-gray-600 dark:text-gray-400">We roll out your new brand identity and campaigns across all platforms.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Awards Section -->
+                <section>
+                    <h2 class="mb-8 text-center text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">Certifications & Awards</h2>
+                    <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+                        <div class="flex items-center justify-center rounded-lg bg-gray-200/50 p-6 dark:bg-gray-800/50">
+                            <img alt="Award Logo" class="h-16 w-auto grayscale hover:grayscale-0 transition-all"
+                                 src="https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=100&h=100&fit=crop&auto=format"/>
+                        </div>
+                        <div class="flex items-center justify-center rounded-lg bg-gray-200/50 p-6 dark:bg-gray-800/50">
+                            <img alt="Award Logo" class="h-16 w-auto grayscale hover:grayscale-0 transition-all"
+                                 src="https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=100&h=100&fit=crop&auto=format"/>
+                        </div>
+                        <div class="flex items-center justify-center rounded-lg bg-gray-200/50 p-6 dark:bg-gray-800/50">
+                            <img alt="Award Logo" class="h-16 w-auto grayscale hover:grayscale-0 transition-all"
+                                 src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=100&h=100&fit=crop&auto=format"/>
+                        </div>
+                        <div class="flex items-center justify-center rounded-lg bg-gray-200/50 p-6 dark:bg-gray-800/50">
+                            <img alt="Award Logo" class="h-16 w-auto grayscale hover:grayscale-0 transition-all"
+                                 src="https://images.unsplash.com/photo-1635405074683-96d6921a2a68?w=100&h=100&fit=crop&auto=format"/>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

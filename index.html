@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="social.i Consultancy - A boutique creative marketing consultancy transforming visionary ideas into purposeful brands.">
+    <title>social.i Consultancy - Boutique Creative Marketing</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#e25b32",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#211511",
+                    },
+                    fontFamily: {
+                        display: ["Work Sans"]
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        lg: "1rem",
+                        xl: "1.5rem",
+                        full: "9999px"
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: "Work Sans", sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-zinc-800 dark:text-zinc-200">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-lg border-b border-zinc-200 dark:border-zinc-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex h-20 items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <img src="assets/images/brand_logo.avif" alt="social.i" class="h-10 w-10">
+                    <h2 class="text-2xl font-bold tracking-tight text-zinc-900 dark:text-white">social.i</h2>
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-medium text-primary transition-colors" href="index.html">Home</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="services.html">Services</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="about.html">About</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="insights.html">Insights</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="contact.html">Contact</a>
+                </nav>
+                <button class="hidden md:flex items-center justify-center px-5 py-2.5 bg-primary text-white text-sm font-bold rounded-lg hover:bg-primary/90 transition-colors">
+                    <a href="contact.html">Book a Call</a>
+                </button>
+                <button class="md:hidden text-zinc-800 dark:text-zinc-200" id="mobile-menu-toggle">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24">
+        <section class="text-center">
+            <div class="relative min-h-[500px] flex items-end justify-start p-8 md:p-12 rounded-xl overflow-hidden bg-cover bg-center"
+                 style='background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&auto=format&fit=crop");'>
+                <div class="max-w-2xl text-left">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight tracking-tight">
+                        Purpose-driven brands, built to perform.
+                    </h1>
+                    <p class="mt-4 text-lg text-white/90">
+                        Strategies and stories that turn attention into growth — branding, content, PR, and digital campaigns.
+                    </p>
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <a href="contact.html" class="px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-colors">
+                            Book a Strategy Call
+                        </a>
+                        <a href="about.html" class="px-6 py-3 bg-white/20 dark:bg-white/10 text-white font-bold rounded-lg hover:bg-white/30 dark:hover:bg-white/20 backdrop-blur-sm transition-colors">
+                            Learn Our Story
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trusted By Section -->
+        <section class="py-16">
+            <h3 class="text-center text-sm font-semibold text-zinc-600 dark:text-zinc-400 uppercase tracking-wider">
+                Trusted by brands that matter
+            </h3>
+            <div class="mt-8 grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
+                <div class="grayscale hover:grayscale-0 transition-all duration-300">
+                    <img alt="Client Logo" class="aspect-square object-contain mx-auto h-20"
+                         src="https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=200&h=200&fit=crop&auto=format">
+                </div>
+                <div class="grayscale hover:grayscale-0 transition-all duration-300">
+                    <img alt="Client Logo" class="aspect-square object-contain mx-auto h-20"
+                         src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=200&h=200&fit=crop&auto=format">
+                </div>
+                <div class="grayscale hover:grayscale-0 transition-all duration-300">
+                    <img alt="Client Logo" class="aspect-square object-contain mx-auto h-20"
+                         src="https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=200&h=200&fit=crop&auto=format">
+                </div>
+                <div class="grayscale hover:grayscale-0 transition-all duration-300">
+                    <img alt="Client Logo" class="aspect-square object-contain mx-auto h-20"
+                         src="https://images.unsplash.com/photo-1635405074683-96d6921a2a68?w=200&h=200&fit=crop&auto=format">
+                </div>
+                <div class="grayscale hover:grayscale-0 transition-all duration-300">
+                    <img alt="Client Logo" class="aspect-square object-contain mx-auto h-20"
+                         src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=200&h=200&fit=crop&auto=format">
+                </div>
+            </div>
+        </section>
+
+        <!-- What We Do Section -->
+        <section class="py-16">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white">
+                    We Help Brands Like Yours
+                </h2>
+                <p class="mt-4 text-lg text-zinc-600 dark:text-zinc-400">
+                    We're a brand strategy consultancy that crafts purpose-driven brands through storytelling, digital excellence, and impactful campaigns.
+                </p>
+            </div>
+            <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white dark:bg-zinc-800/20 p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+                    <div class="text-primary" data-icon="PresentationChart" data-size="32px">
+                        <svg fill="currentColor" height="32px" viewBox="0 0 256 256" width="32px" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M216,40H136V24a8,8,0,0,0-16,0V40H40A16,16,0,0,0,24,56V176a16,16,0,0,0,16,16H79.36L57.75,219a8,8,0,0,0,12.5,10l29.59-37h56.32l29.59,37a8,8,0,1,0,12.5-10l-21.61-27H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,136H40V56H216V176ZM104,120v24a8,8,0,0,1-16,0V120a8,8,0,0,1,16,0Zm32-16v40a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm32-16v56a8,8,0,0,1-16,0V88a8,8,0,0,1,16,0Z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="mt-4 text-lg font-bold text-zinc-900 dark:text-white">Increase Brand Awareness</h3>
+                    <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">Elevate your brand's visibility and recognition in the market.</p>
+                </div>
+
+                <div class="bg-white dark:bg-zinc-800/20 p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+                    <div class="text-primary">
+                        <svg fill="currentColor" height="32px" viewBox="0 0 256 256" width="32px" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="mt-4 text-lg font-bold text-zinc-900 dark:text-white">Grow Organic Reach</h3>
+                    <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">Expand your audience organically through strategic content and SEO.</p>
+                </div>
+
+                <div class="bg-white dark:bg-zinc-800/20 p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+                    <div class="text-primary">
+                        <svg fill="currentColor" height="32px" viewBox="0 0 256 256" width="32px" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M240,120a48.05,48.05,0,0,0-48-48H152.2c-2.91-.17-53.62-3.74-101.91-44.24A16,16,0,0,0,24,40V200a16,16,0,0,0,26.29,12.25c37.77-31.68,77-40.76,93.71-43.3v31.72A16,16,0,0,0,151.12,214l11,7.33A16,16,0,0,0,186.5,212l11.77-44.36A48.07,48.07,0,0,0,240,120ZM40,199.93V40h0c42.81,35.91,86.63,45,104,47.24v65.48C126.65,155,82.84,164.07,40,199.93Zm131,8,0,.11-11-7.33V168h21.6ZM192,152H160V88h32a32,32,0,1,1,0,64Z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="mt-4 text-lg font-bold text-zinc-900 dark:text-white">Secure Media Coverage</h3>
+                    <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">Gain exposure and credibility through targeted media placements.</p>
+                </div>
+
+                <div class="bg-white dark:bg-zinc-800/20 p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+                    <div class="text-primary">
+                        <svg fill="currentColor" height="32px" viewBox="0 0 256 256" width="32px" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24ZM101.63,168h52.74C149,186.34,140,202.87,128,215.89,116,202.87,107,186.34,101.63,168ZM98,152a145.72,145.72,0,0,1,0-48h60a145.72,145.72,0,0,1,0,48ZM40,128a87.61,87.61,0,0,1,3.33-24H81.79a161.79,161.79,0,0,0,0,48H43.33A87.61,87.61,0,0,1,40,128ZM154.37,88H101.63C107,69.66,116,53.13,128,40.11,140,53.13,149,69.66,154.37,88Zm19.84,16h38.46a88.15,88.15,0,0,1,0,48H174.21a161.79,161.79,0,0,0,0-48Zm32.16-16H170.94a142.39,142.39,0,0,0-20.26-45A88.37,88.37,0,0,1,206.37,88ZM105.32,43A142.39,142.39,0,0,0,85.06,88H49.63A88.37,88.37,0,0,1,105.32,43ZM49.63,168H85.06a142.39,142.39,0,0,0,20.26,45A88.37,88.37,0,0,1,49.63,168Zm101.05,45a142.39,142.39,0,0,0,20.26-45h35.43A88.37,88.37,0,0,1,150.68,213Z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="mt-4 text-lg font-bold text-zinc-900 dark:text-white">Drive Engagement</h3>
+                    <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">Connect with your audience on a deeper, more meaningful level.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies Snapshots -->
+        <section class="py-16">
+            <div class="flex justify-between items-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white">Featured Work</h2>
+                <a href="#" class="text-primary font-bold text-sm hover:underline">View All Cases</a>
+            </div>
+            <div class="mt-8 grid md:grid-cols-3 gap-8">
+                <div class="group">
+                    <div class="overflow-hidden rounded-lg">
+                        <img alt="Eco-Friendly Startup" class="aspect-video object-cover w-full group-hover:scale-105 transition-transform duration-300"
+                             src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&auto=format&fit=crop">
+                    </div>
+                    <h3 class="mt-4 text-lg font-bold text-zinc-900 dark:text-white">Eco-Friendly Startup Refresh</h3>
+                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">40% increase in brand awareness after revitalizing identity and messaging.</p>
+                </div>
+
+                <div class="group">
+                    <div class="overflow-hidden rounded-lg">
+                        <img alt="Social Impact Campaign" class="aspect-video object-cover w-full group-hover:scale-105 transition-transform duration-300"
+                             src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&auto=format&fit=crop">
+                    </div>
+                    <h3 class="mt-4 text-lg font-bold text-zinc-900 dark:text-white">Social Impact Digital Campaign</h3>
+                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Reached over 1 million people and drove a 25% conversion rate.</p>
+                </div>
+
+                <div class="group">
+                    <div class="overflow-hidden rounded-lg">
+                        <img alt="Wellness Brand" class="aspect-video object-cover w-full group-hover:scale-105 transition-transform duration-300"
+                             src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&auto=format&fit=crop">
+                    </div>
+                    <h3 class="mt-4 text-lg font-bold text-zinc-900 dark:text-white">Wellness Brand Content Strategy</h3>
+                    <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Increased website traffic by 60% and engagement by 50%.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-primary/10 dark:bg-primary/20 rounded-xl p-8 md:p-16 my-16">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white">Ready to elevate your brand?</h2>
+                <p class="mt-4 text-lg text-zinc-600 dark:text-zinc-300">Let's discuss how we can help you achieve your goals and build a brand that performs.</p>
+                <div class="mt-8">
+                    <a href="contact.html" class="px-8 py-4 bg-primary text-white text-lg font-bold rounded-lg hover:bg-primary/90 transition-colors inline-block">
+                        Book a Strategy Call
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="py-16">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white">From Our Clients</h2>
+                <p class="mt-4 text-lg text-zinc-600 dark:text-zinc-400">Hear what our partners have to say about working with social.i.</p>
+            </div>
+            <div class="mt-12 grid md:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-zinc-800/20 p-6 rounded-lg flex flex-col items-center text-center">
+                    <img class="w-24 h-24 rounded-full object-cover"
+                         src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&auto=format"
+                         alt="Sarah Chen">
+                    <blockquote class="mt-4 text-zinc-700 dark:text-zinc-300">
+                        "social.i transformed our brand from the ground up. Their strategic approach and creative execution exceeded our expectations."
+                    </blockquote>
+                    <cite class="mt-4 font-bold text-zinc-900 dark:text-white">Sarah Chen</cite>
+                    <span class="text-sm text-zinc-500 dark:text-zinc-400">Founder, GreenTech Solutions</span>
+                </div>
+
+                <div class="bg-white dark:bg-zinc-800/20 p-6 rounded-lg flex flex-col items-center text-center">
+                    <img class="w-24 h-24 rounded-full object-cover"
+                         src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop&auto=format"
+                         alt="David Lee">
+                    <blockquote class="mt-4 text-zinc-700 dark:text-zinc-300">
+                        "The team at social.i truly understands our mission. Their PR efforts have significantly increased our visibility and impact."
+                    </blockquote>
+                    <cite class="mt-4 font-bold text-zinc-900 dark:text-white">David Lee</cite>
+                    <span class="text-sm text-zinc-500 dark:text-zinc-400">CEO, Impactful Innovations</span>
+                </div>
+
+                <div class="bg-white dark:bg-zinc-800/20 p-6 rounded-lg flex flex-col items-center text-center">
+                    <img class="w-24 h-24 rounded-full object-cover"
+                         src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&auto=format"
+                         alt="Emily Rodriguez">
+                    <blockquote class="mt-4 text-zinc-700 dark:text-zinc-300">
+                        "We've seen a remarkable improvement in our digital presence thanks to social.i's expertise. Their content is top-notch."
+                    </blockquote>
+                    <cite class="mt-4 font-bold text-zinc-900 dark:text-white">Emily Rodriguez</cite>
+                    <span class="text-sm text-zinc-500 dark:text-zinc-400">Marketing Director, Wellness Co.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="py-16">
+            <div class="max-w-xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-zinc-900 dark:text-white">Stay Updated</h2>
+                <p class="mt-2 text-zinc-600 dark:text-zinc-400">Get the latest insights and tips on building a purpose-driven brand.</p>
+                <form class="mt-6 flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
+                    <input class="flex-grow px-4 py-3 rounded-lg border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 focus:ring-primary focus:border-primary"
+                           placeholder="Enter your email" type="email">
+                    <button class="px-6 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-colors" type="submit">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-zinc-200 dark:border-zinc-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-bold text-zinc-900 dark:text-white">social.i</h3>
+                    <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">Purpose-driven brands, built to perform.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-zinc-900 dark:text-white">Navigation</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a class="text-sm text-zinc-600 dark:text-zinc-400 hover:text-primary" href="services.html">Services</a></li>
+                        <li><a class="text-sm text-zinc-600 dark:text-zinc-400 hover:text-primary" href="about.html">About</a></li>
+                        <li><a class="text-sm text-zinc-600 dark:text-zinc-400 hover:text-primary" href="insights.html">Insights</a></li>
+                        <li><a class="text-sm text-zinc-600 dark:text-zinc-400 hover:text-primary" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-zinc-900 dark:text-white">Legal</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a class="text-sm text-zinc-600 dark:text-zinc-400 hover:text-primary" href="#">Privacy Policy</a></li>
+                        <li><a class="text-sm text-zinc-600 dark:text-zinc-400 hover:text-primary" href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-zinc-900 dark:text-white">Connect</h4>
+                    <div class="flex mt-4 space-x-4">
+                        <a class="text-zinc-500 dark:text-zinc-400 hover:text-primary" href="#">
+                            <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </a>
+                        <a class="text-zinc-500 dark:text-zinc-400 hover:text-primary" href="#">
+                            <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12c0-5.523-4.477-10-10-10z" fill-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a class="text-zinc-500 dark:text-zinc-400 hover:text-primary" href="#">
+                            <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-zinc-200 dark:border-zinc-800 pt-8 text-center text-sm text-zinc-500 dark:text-zinc-400">
+                <p>&copy; 2024 social.i Consultancy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

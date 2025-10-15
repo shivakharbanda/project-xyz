@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights - social.i Consultancy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#e25b32",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#211511",
+                    },
+                    fontFamily: {
+                        display: ["Work Sans"],
+                    },
+                    borderRadius: { DEFAULT: "0.5rem", lg: "1rem", xl: "1.5rem", full: "9999px" },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+    <div class="relative flex h-auto min-h-screen w-full flex-col">
+        <header class="sticky top-0 z-10 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-zinc-200 dark:border-zinc-800">
+            <div class="container mx-auto flex items-center justify-between px-6 py-4">
+                <a class="flex items-center gap-3" href="index.html">
+                    <img src="assets/images/brand_logo.avif" alt="social.i" class="h-10 w-10">
+                    <h2 class="text-xl font-bold text-gray-900 dark:text-white">social.i</h2>
+                </a>
+                <nav class="hidden items-center gap-8 md:flex">
+                    <a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="index.html">Home</a>
+                    <a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="services.html">Services</a>
+                    <a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="about.html">About</a>
+                    <a class="text-sm font-medium text-primary dark:text-gray-300 dark:hover:text-primary" href="insights.html">Insights</a>
+                    <a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="contact.html">Contact</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a href="contact.html" class="hidden md:flex h-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-primary px-6 text-sm font-bold text-white transition-all hover:bg-primary/80">
+                        <span class="truncate">Get Started</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main class="container mx-auto flex-1 px-6 py-12">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">Insights</h1>
+                    <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">Explore our latest articles on brand strategy, digital marketing, and more.</p>
+                </div>
+
+                <!-- Filter Buttons -->
+                <div class="mb-12 flex flex-wrap items-center justify-center gap-3">
+                    <button class="rounded-full px-4 py-2 text-sm font-medium bg-primary/10 text-primary dark:bg-primary/20 transition-colors hover:bg-primary/20 dark:hover:bg-primary/30">All</button>
+                    <button class="rounded-full px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-primary/10 hover:text-primary dark:hover:bg-primary/20 transition-colors">Branding</button>
+                    <button class="rounded-full px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-primary/10 hover:text-primary dark:hover:bg-primary/20 transition-colors">Content Strategy</button>
+                    <button class="rounded-full px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-primary/10 hover:text-primary dark:hover:bg-primary/20 transition-colors">Digital Trends</button>
+                    <button class="rounded-full px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-primary/10 hover:text-primary dark:hover:bg-primary/20 transition-colors">PR</button>
+                </div>
+
+                <!-- Blog Articles -->
+                <div class="grid gap-12">
+                    <!-- Article 1 -->
+                    <article class="group @container">
+                        <div class="flex flex-col overflow-hidden rounded-xl bg-white shadow-md transition-shadow duration-300 hover:shadow-xl dark:bg-background-dark/50 dark:hover:shadow-primary/10 @xl:flex-row">
+                            <div class="w-full @xl:w-2/5">
+                                <div class="aspect-video w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
+                                     style='background-image: url("https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&auto=format&fit=crop");'></div>
+                            </div>
+                            <div class="flex flex-1 flex-col justify-between p-6 @xl:p-8">
+                                <div>
+                                    <p class="mb-2 text-sm font-medium text-primary">Branding</p>
+                                    <h3 class="mb-3 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                                        <a class="hover:text-primary" href="#">Crafting a Compelling Brand Narrative</a>
+                                    </h3>
+                                    <p class="text-gray-600 dark:text-gray-400">Learn how to define your brand's core values and create a story that resonates with your audience.</p>
+                                </div>
+                                <div class="mt-6 flex items-center justify-between">
+                                    <span class="text-xs text-gray-500 dark:text-gray-500">Oct 26, 2024 · 5 min read</span>
+                                    <a class="flex items-center gap-2 rounded-full px-4 py-2 text-sm font-bold text-primary transition-colors hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+                                        <span>Read More</span>
+                                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 2 -->
+                    <article class="group @container">
+                        <div class="flex flex-col overflow-hidden rounded-xl bg-white shadow-md transition-shadow duration-300 hover:shadow-xl dark:bg-background-dark/50 dark:hover:shadow-primary/10 @xl:flex-row">
+                            <div class="w-full @xl:w-2/5">
+                                <div class="aspect-video w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
+                                     style='background-image: url("https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop");'></div>
+                            </div>
+                            <div class="flex flex-1 flex-col justify-between p-6 @xl:p-8">
+                                <div>
+                                    <p class="mb-2 text-sm font-medium text-primary">Content Strategy</p>
+                                    <h3 class="mb-3 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                                        <a class="hover:text-primary" href="#">Maximizing Your Content Impact</a>
+                                    </h3>
+                                    <p class="text-gray-600 dark:text-gray-400">Discover strategies for creating and distributing content that drives engagement and conversions.</p>
+                                </div>
+                                <div class="mt-6 flex items-center justify-between">
+                                    <span class="text-xs text-gray-500 dark:text-gray-500">Oct 20, 2024 · 7 min read</span>
+                                    <a class="flex items-center gap-2 rounded-full px-4 py-2 text-sm font-bold text-primary transition-colors hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+                                        <span>Read More</span>
+                                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 3 -->
+                    <article class="group @container">
+                        <div class="flex flex-col overflow-hidden rounded-xl bg-white shadow-md transition-shadow duration-300 hover:shadow-xl dark:bg-background-dark/50 dark:hover:shadow-primary/10 @xl:flex-row">
+                            <div class="w-full @xl:w-2/5">
+                                <div class="aspect-video w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
+                                     style='background-image: url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop");'></div>
+                            </div>
+                            <div class="flex flex-1 flex-col justify-between p-6 @xl:p-8">
+                                <div>
+                                    <p class="mb-2 text-sm font-medium text-primary">Digital Trends</p>
+                                    <h3 class="mb-3 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                                        <a class="hover:text-primary" href="#">Navigating the Future of Digital Marketing</a>
+                                    </h3>
+                                    <p class="text-gray-600 dark:text-gray-400">Stay ahead of the curve with insights into the latest trends shaping the digital landscape.</p>
+                                </div>
+                                <div class="mt-6 flex items-center justify-between">
+                                    <span class="text-xs text-gray-500 dark:text-gray-500">Oct 15, 2024 · 4 min read</span>
+                                    <a class="flex items-center gap-2 rounded-full px-4 py-2 text-sm font-bold text-primary transition-colors hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+                                        <span>Read More</span>
+                                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 4 -->
+                    <article class="group @container">
+                        <div class="flex flex-col overflow-hidden rounded-xl bg-white shadow-md transition-shadow duration-300 hover:shadow-xl dark:bg-background-dark/50 dark:hover:shadow-primary/10 @xl:flex-row">
+                            <div class="w-full @xl:w-2/5">
+                                <div class="aspect-video w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
+                                     style='background-image: url("https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=800&auto=format&fit=crop");'></div>
+                            </div>
+                            <div class="flex flex-1 flex-col justify-between p-6 @xl:p-8">
+                                <div>
+                                    <p class="mb-2 text-sm font-medium text-primary">PR</p>
+                                    <h3 class="mb-3 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                                        <a class="hover:text-primary" href="#">Securing Media Coverage for Your Brand</a>
+                                    </h3>
+                                    <p class="text-gray-600 dark:text-gray-400">Get practical tips on building relationships with journalists and crafting compelling pitches.</p>
+                                </div>
+                                <div class="mt-6 flex items-center justify-between">
+                                    <span class="text-xs text-gray-500 dark:text-gray-500">Oct 10, 2024 · 6 min read</span>
+                                    <a class="flex items-center gap-2 rounded-full px-4 py-2 text-sm font-bold text-primary transition-colors hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+                                        <span>Read More</span>
+                                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <footer class="bg-white/50 dark:bg-background-dark/50 border-t border-zinc-200 dark:border-zinc-800 mt-16">
+            <div class="container mx-auto px-6 py-12">
+                <div class="flex flex-col items-center justify-between gap-8 md:flex-row">
+                    <div class="flex flex-wrap justify-center gap-x-6 gap-y-4 md:order-2">
+                        <a class="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="services.html">Services</a>
+                        <a class="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="about.html">About</a>
+                        <a class="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="insights.html">Insights</a>
+                        <a class="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="contact.html">Contact</a>
+                    </div>
+                    <p class="text-sm text-gray-500 md:order-1">&copy; 2024 social.i Consultancy. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

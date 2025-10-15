@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Our boutique marketing services: Branding, Content Strategy, PR, Digital Marketing, and Creative Design.">
+    <title>Our Services - social.i Consultancy</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#e25b32",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#211511",
+                    },
+                    fontFamily: {
+                        display: ["Work Sans"]
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        lg: "1rem",
+                        xl: "1.5rem",
+                        full: "9999px"
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: "Work Sans", sans-serif;
+        }
+        .timeline-decorator::before {
+            content: '';
+            position: absolute;
+            top: 1.75rem;
+            bottom: 0;
+            left: 1rem;
+            width: 2px;
+            background-color: #e25b32;
+            opacity: 0.2;
+            z-index: 0;
+        }
+        .timeline-item:last-child .timeline-decorator::before {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-zinc-900 dark:text-zinc-200">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-lg border-b border-zinc-200 dark:border-zinc-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex h-20 items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <img src="assets/images/brand_logo.avif" alt="social.i" class="h-10 w-10">
+                    <h2 class="text-2xl font-bold tracking-tight text-zinc-900 dark:text-white">social.i</h2>
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">Home</a>
+                    <a class="text-sm font-medium text-primary transition-colors" href="services.html">Services</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="about.html">About</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="insights.html">Insights</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="contact.html">Contact</a>
+                </nav>
+                <button class="hidden md:flex items-center justify-center px-5 py-2.5 bg-primary text-white text-sm font-bold rounded-lg hover:bg-primary/90 transition-colors">
+                    <a href="contact.html">Book a Call</a>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto max-w-5xl px-4 py-12 md:py-20">
+        <!-- Hero -->
+        <div class="grid grid-cols-1 gap-16 md:grid-cols-2 md:gap-12 lg:gap-20">
+            <div class="flex flex-col justify-center">
+                <h1 class="text-4xl font-black leading-tight tracking-tighter text-zinc-900 dark:text-white md:text-5xl lg:text-6xl">
+                    Our Services
+                </h1>
+                <p class="mt-6 text-lg text-zinc-600 dark:text-zinc-400">
+                    We craft purpose-driven brands through storytelling, digital excellence, and impactful campaigns. From branding to PR, content to digital — we take a holistic approach.
+                </p>
+                <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+                    <a class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-6 py-3 text-base font-bold text-white shadow-lg transition-all hover:bg-primary/90" href="contact.html">
+                        Book a Strategy Call
+                    </a>
+                    <a class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary/20 px-6 py-3 text-base font-bold text-primary transition-all hover:bg-primary/30 dark:bg-primary/20 dark:hover:bg-primary/30" href="#services">
+                        Explore Services
+                    </a>
+                </div>
+            </div>
+            <div class="relative hidden h-full min-h-[400px] rounded-xl bg-cover bg-center md:block"
+                 style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop')">
+                <div class="absolute inset-0 rounded-xl bg-gradient-to-t from-background-light via-transparent dark:from-background-dark"></div>
+            </div>
+        </div>
+
+        <!-- Our Approach -->
+        <section class="mt-24 md:mt-32" id="services">
+            <div class="mx-auto mb-12 max-w-3xl text-center">
+                <h2 class="text-3xl font-bold tracking-tight text-zinc-900 dark:text-white md:text-4xl">Our Approach</h2>
+                <p class="mt-4 text-lg text-zinc-600 dark:text-zinc-400">A structured process to build brands that last.</p>
+            </div>
+            <div class="relative">
+                <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+                    <div class="timeline-item relative">
+                        <div class="timeline-decorator relative z-10">
+                            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary/20">
+                                <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-bold text-zinc-900 dark:text-white">1. Discovery & Strategy</h3>
+                        <p class="mt-2 text-zinc-600 dark:text-zinc-400">We dive deep into your business, understanding your goals, target audience, and competitive landscape.</p>
+                    </div>
+
+                    <div class="timeline-item relative">
+                        <div class="timeline-decorator relative z-10">
+                            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary/20">
+                                <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M227.31,73.37,182.63,28.68a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H92.69A15.86,15.86,0,0,0,104,219.31L227.31,96a16,16,0,0,0,0-22.63ZM92.69,208H48V163.31l88-88L180.69,120ZM192,108.68,147.31,64l24-24L216,84.68Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-bold text-zinc-900 dark:text-white">2. Brand Identity Design</h3>
+                        <p class="mt-2 text-zinc-600 dark:text-zinc-400">We create a visual identity that reflects your brand's personality and resonates with your audience.</p>
+                    </div>
+
+                    <div class="timeline-item relative">
+                        <div class="timeline-decorator relative z-10">
+                            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary/20">
+                                <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M240,120a48.05,48.05,0,0,0-48-48H152.2c-2.91-.17-53.62-3.74-101.91-44.24A16,16,0,0,0,24,40V200a16,16,0,0,0,26.29,12.25c37.77-31.68,77-40.76,93.71-43.3v31.72A16,16,0,0,0,151.12,214l11,7.33A16,16,0,0,0,186.5,212l11.77-44.36A48.07,48.07,0,0,0,240,120ZM40,199.93V40h0c42.81,35.91,86.63,45,104,47.24v65.48C126.65,155,82.84,164.07,40,199.93Zm131,8,0,.11-11-7.33V168h21.6ZM192,152H160V88h32a32,32,0,1,1,0,64Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-bold text-zinc-900 dark:text-white">3. Messaging & Storytelling</h3>
+                        <p class="mt-2 text-zinc-600 dark:text-zinc-400">We craft compelling brand messaging and stories that connect with your audience on an emotional level.</p>
+                    </div>
+
+                    <div class="timeline-item relative">
+                        <div class="timeline-decorator relative z-10">
+                            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary/20">
+                                <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M103.77,185.94C103.38,187.49,93.63,224,40,224a8,8,0,0,1-8-8c0-53.63,36.51-63.38,38.06-63.77a8,8,0,0,1,3.88,15.53c-.9.25-22.42,6.54-25.56,39.86C81.7,204.48,88,183,88.26,182a8,8,0,0,1,15.51,4Zm93-67.4L192,123.31v58.33A15.91,15.91,0,0,1,187.32,193L153,227.3A15.91,15.91,0,0,1,141.7,232a16.11,16.11,0,0,1-5.1-.83,15.94,15.94,0,0,1-10.78-12.92l-5.37-38.49L76.24,135.55l-38.47-5.37A16,16,0,0,1,28.7,103L63,68.68A15.91,15.91,0,0,1,74.36,64h58.33l4.77-4.77c26.68-26.67,58.83-27.82,71.41-27.07a16,16,0,0,1,15,15C224.6,59.71,223.45,91.86,196.78,118.54ZM40,114.34l37.15,5.18L116.69,80H74.36ZM91.32,128,128,164.68l57.45-57.45a76.46,76.46,0,0,0,22.42-59.16,76.65,76.65,0,0,0-59.11,22.47ZM176,139.31l-39.53,39.53L141.67,216,176,181.64Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-bold text-zinc-900 dark:text-white">4. Launch & Implementation</h3>
+                        <p class="mt-2 text-zinc-600 dark:text-zinc-400">We help you launch your new brand and provide ongoing support to ensure its success.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Details -->
+        <section class="mt-24 md:mt-32">
+            <div class="mx-auto mb-12 max-w-3xl text-center">
+                <h2 class="text-3xl font-bold tracking-tight text-zinc-900 dark:text-white md:text-4xl">What You'll Get</h2>
+                <p class="mt-4 text-lg text-zinc-600 dark:text-zinc-400">Tangible assets and a clear roadmap for your brand's future.</p>
+            </div>
+            <div class="divide-y divide-primary/20 rounded-xl border border-primary/20 bg-background-light p-2 dark:border-primary/30 dark:bg-background-dark md:p-4">
+                <div class="grid grid-cols-1 gap-4 p-4 md:grid-cols-3 md:p-6">
+                    <h3 class="font-bold text-primary md:col-span-1">Brand Strategy</h3>
+                    <p class="text-zinc-600 dark:text-zinc-400 md:col-span-2">A comprehensive brand strategy document outlining your brand's purpose, values, target audience, and competitive positioning.</p>
+                </div>
+                <div class="grid grid-cols-1 gap-4 p-4 md:grid-cols-3 md:p-6">
+                    <h3 class="font-bold text-primary md:col-span-1">Visual Identity</h3>
+                    <p class="text-zinc-600 dark:text-zinc-400 md:col-span-2">A unique and memorable visual identity, including logo, color palette, typography, and visual elements.</p>
+                </div>
+                <div class="grid grid-cols-1 gap-4 p-4 md:grid-cols-3 md:p-6">
+                    <h3 class="font-bold text-primary md:col-span-1">Content Creation</h3>
+                    <p class="text-zinc-600 dark:text-zinc-400 md:col-span-2">Custom content strategies and original content that engages, educates, and inspires across all platforms.</p>
+                </div>
+                <div class="grid grid-cols-1 gap-4 p-4 md:grid-cols-3 md:p-6">
+                    <h3 class="font-bold text-primary md:col-span-1">Media Relations</h3>
+                    <p class="text-zinc-600 dark:text-zinc-400 md:col-span-2">Strategic media outreach, press releases, and influencer partnerships to amplify your brand voice.</p>
+                </div>
+                <div class="grid grid-cols-1 gap-4 p-4 md:grid-cols-3 md:p-6">
+                    <h3 class="font-bold text-primary md:col-span-1">Digital Marketing</h3>
+                    <p class="text-zinc-600 dark:text-zinc-400 md:col-span-2">Social media management, SEO, targeted advertising, and performance analytics to drive growth.</p>
+                </div>
+                <div class="grid grid-cols-1 gap-4 p-4 md:grid-cols-3 md:p-6">
+                    <h3 class="font-bold text-primary md:col-span-1">Creative Design</h3>
+                    <p class="text-zinc-600 dark:text-zinc-400 md:col-span-2">Bespoke visuals, web experiences, and creative assets that bring your brand to life.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="mt-24 md:mt-32">
+            <div class="mx-auto mb-12 max-w-3xl text-center">
+                <h2 class="text-3xl font-bold tracking-tight text-zinc-900 dark:text-white md:text-4xl">Frequently Asked Questions</h2>
+            </div>
+            <div class="mx-auto max-w-3xl space-y-4">
+                <details class="group rounded-lg border border-primary/20 bg-background-light p-4 dark:border-primary/30 dark:bg-background-dark">
+                    <summary class="flex cursor-pointer items-center justify-between font-medium text-zinc-900 dark:text-white">
+                        How long does the branding process take?
+                        <span class="transform transition-transform duration-300 group-open:rotate-180">
+                            <svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-zinc-600 dark:text-zinc-400">Our standard branding process typically takes 6-8 weeks from start to finish, depending on the complexity of the project and client feedback cycles.</p>
+                </details>
+
+                <details class="group rounded-lg border border-primary/20 bg-background-light p-4 dark:border-primary/30 dark:bg-background-dark">
+                    <summary class="flex cursor-pointer items-center justify-between font-medium text-zinc-900 dark:text-white">
+                        What is the cost of your branding services?
+                        <span class="transform transition-transform duration-300 group-open:rotate-180">
+                            <svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-zinc-600 dark:text-zinc-400">Pricing varies based on the scope of work. We offer custom packages and can provide a detailed quote after our initial strategy call.</p>
+                </details>
+
+                <details class="group rounded-lg border border-primary/20 bg-background-light p-4 dark:border-primary/30 dark:bg-background-dark">
+                    <summary class="flex cursor-pointer items-center justify-between font-medium text-zinc-900 dark:text-white">
+                        Do you offer ongoing support after the launch?
+                        <span class="transform transition-transform duration-300 group-open:rotate-180">
+                            <svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-zinc-600 dark:text-zinc-400">Yes, we offer ongoing support retainers for brand management, content creation, and digital marketing to ensure your brand continues to grow and thrive.</p>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-24 bg-background-light dark:bg-background-dark border-t border-primary/20 py-8 px-4 md:mt-32 md:px-10">
+        <div class="mx-auto max-w-5xl text-center text-sm text-zinc-500 dark:text-zinc-400">
+            <p>&copy; 2024 social.i Consultancy. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
