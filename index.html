@@ -1,303 +1,357 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="social.i Consultancy - A boutique creative marketing consultancy transforming visionary ideas into purposeful brands.">
-    <title>social.i Consultancy - Boutique Creative Marketing</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Satoshi:wght@700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "vibrant-orange": "#E5592F",
-                        "warm-beige": "#F4C79B",
-                        "deep-burnt-orange": "#A93D1E",
-                        "dark-forest-green": "#1B4231",
-                        "background-light": "#FFFBF7",
-                        "text-dark": "#1A1A1A",
-                    },
-                    fontFamily: {
-                        heading: ["Satoshi", "sans-serif"],
-                        body: ["Work Sans", "sans-serif"],
-                        sans: ["Inter", "sans-serif"],
-                    },
-                    borderRadius: {
-                        DEFAULT: "0.5rem",
-                        lg: "1rem",
-                        xl: "1.5rem",
-                        full: "9999px"
-                    },
-                },
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="social.i Consultancy - A boutique creative marketing consultancy transforming visionary ideas into purposeful brands.">
+<title>social.i Consultancy - Boutique Creative Marketing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Satoshi:wght@700&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "vibrant-orange": "#E5592F",
+            "warm-beige": "#F4C79B",
+            "deep-burnt-orange": "#A93D1E",
+            "dark-forest-green": "#1B4231",
+            "background-light": "#FFFBF7",
+            "text-dark": "#1A1A1A",
+          },
+          fontFamily: {
+            heading: ["Satoshi", "sans-serif"],
+            body: ["Work Sans", "sans-serif"],
+            sans: ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.5rem",
+            lg: "1rem",
+            xl: "1.5rem",
+            full: "9999px"
+          },
+          keyframes: {
+            marquee: {
+              '0%': {
+                transform: 'translateX(0%)'
+              },
+              '100%': {
+                transform: 'translateX(-100%)'
+              },
             },
-        };
-    </script>
-    <style>
-        body {
-            font-family: "Work Sans", sans-serif;
-            background-color: #FFFBF7;
-        }
-        .font-heading {
-            font-family: 'Satoshi', sans-serif;
-        }
-    </style>
+            "pulse-slow": {
+              '0%, 100%': {
+                transform: 'scale(1)',
+                opacity: '1'
+              },
+              '50%': {
+                transform: 'scale(1.05)',
+                opacity: '0.7'
+              },
+            },
+            "float": {
+              '0%, 100%': {
+                transform: 'translateY(0)'
+              },
+              '50%': {
+                transform: 'translateY(-20px)'
+              },
+            }
+          },
+          animation: {
+            marquee: 'marquee 40s linear infinite',
+            "pulse-slow": 'pulse-slow 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            "float": 'float 12s ease-in-out infinite',
+          },
+        },
+      },
+    };
+  </script>
+<style>
+    body {
+      font-family: "Work Sans", sans-serif;
+      background-color: #FFFBF7;
+    }
+    .font-heading {
+      font-family: 'Satoshi', sans-serif;
+    }
+    .marquee-container:hover .marquee {
+      animation-play-state: paused;
+    }
+    .logo-frame {
+      transition: transform 0.3s ease-in-out;
+    }
+    .logo-frame:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
-<body class="bg-background-light text-text-dark font-sans">
+<body class="bg-background-light text-text-dark">
+<div class="font-sans">
+<header class="sticky top-0 z-50 bg-background-light/80 backdrop-blur-lg border-b border-warm-beige/50">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex h-24 items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="text-vibrant-orange w-10 h-10">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M7.24189 26.4066C7.31369 26.4411 7.64204 26.5637 8.52504 26.3738C9.59462 26.1438 11.0343 25.5311 12.7183 24.4963C14.7583 23.2426 17.0256 21.4503 19.238 19.238C21.4503 17.0256 23.2426 14.7583 24.4963 12.7183C25.5311 11.0343 26.1438 9.59463 26.3738 8.52504C26.5637 7.64204 26.4411 7.31369 26.4066 7.24189C26.345 7.21246 26.143 7.14535 25.6664 7.1918C24.9745 7.25925 23.9954 7.5498 22.7699 8.14278C20.3369 9.32007 17.3369 11.4915 14.4142 14.4142C11.4915 17.3369 9.32007 20.3369 8.14278 22.7699C7.5498 23.9954 7.25925 24.9745 7.1918 25.6664C7.14534 26.143 7.21246 26.345 7.24189 26.4066ZM29.9001 10.7285C29.4519 12.0322 28.7617 13.4172 27.9042 14.8126C26.465 17.1544 24.4686 19.6641 22.0664 22.0664C19.6641 24.4686 17.1544 26.465 14.8126 27.9042C13.4172 28.7617 12.0322 29.4519 10.7285 29.9001L21.5754 40.747C21.6001 40.7606 21.8995 40.931 22.8729 40.7217C23.9424 40.4916 25.3821 39.879 27.0661 38.8441C29.1062 37.5904 31.3734 35.7982 33.5858 33.5858C35.7982 31.3734 37.5904 29.1062 38.8441 27.0661C39.879 25.3821 40.4916 23.9425 40.7216 22.8729C40.931 21.8995 40.7606 21.6001 40.747 21.5754L29.9001 10.7285ZM29.2403 4.41187L43.5881 18.7597C44.9757 20.1473 44.9743 22.1235 44.6322 23.7139C44.2714 25.3919 43.4158 27.2666 42.252 29.1604C40.8128 31.5022 38.8165 34.012 36.4142 36.4142C34.012 38.8165 31.5022 40.8128 29.1604 42.252C27.2666 43.4158 25.3919 44.2714 23.7139 44.6322C22.1235 44.9743 20.1473 44.9757 18.7597 43.5881L4.41187 29.2403C3.29027 28.1187 3.08209 26.5973 3.21067 25.2783C3.34099 23.9415 3.8369 22.4852 4.54214 21.0277C5.96129 18.0948 8.43335 14.7382 11.5858 11.5858C14.7382 8.43335 18.0948 5.9613 21.0277 4.54214C22.4852 3.8369 23.9415 3.34099 25.2783 3.21067C26.5973 3.08209 28.1187 3.29028 29.2403 4.41187Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-3xl font-bold font-heading text-dark-forest-green">social.i</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="font-medium text-lg text-dark-forest-green/80 hover:text-vibrant-orange transition-colors" href="services.html">Services</a>
+<a class="font-medium text-lg text-dark-forest-green/80 hover:text-vibrant-orange transition-colors" href="insights.html">Case Studies</a>
+<a class="font-medium text-lg text-dark-forest-green/80 hover:text-vibrant-orange transition-colors" href="about.html">About</a>
+<a class="font-medium text-lg text-dark-forest-green/80 hover:text-vibrant-orange transition-colors" href="contact.html">Contact</a>
+</nav>
+<a href="contact.html" class="hidden md:flex items-center justify-center px-6 py-3 bg-vibrant-orange text-white text-base font-semibold rounded-full hover:bg-deep-burnt-orange transition-all duration-300 transform hover:scale-105">Book a Strategy Call</a>
+<button class="mobile-menu-toggle md:hidden text-dark-forest-green">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+</svg>
+</button>
+</div>
+<!-- Mobile Menu -->
+<nav class="nav-links md:hidden hidden flex-col gap-4 pb-4">
+<a class="text-sm font-medium text-dark-forest-green/80 hover:text-vibrant-orange transition-colors px-4 py-2" href="index.html">Home</a>
+<a class="text-sm font-medium text-dark-forest-green/80 hover:text-vibrant-orange transition-colors px-4 py-2" href="services.html">Services</a>
+<a class="text-sm font-medium text-dark-forest-green/80 hover:text-vibrant-orange transition-colors px-4 py-2" href="about.html">About</a>
+<a class="text-sm font-medium text-dark-forest-green/80 hover:text-vibrant-orange transition-colors px-4 py-2" href="insights.html">Case Studies</a>
+<a class="text-sm font-medium text-dark-forest-green/80 hover:text-vibrant-orange transition-colors px-4 py-2" href="contact.html">Contact</a>
+<a href="contact.html" class="mx-4 px-5 py-2.5 bg-vibrant-orange text-white text-sm font-bold rounded-full hover:bg-deep-burnt-orange text-center">Book a Strategy Call</a>
+</nav>
+</div>
+</header>
+<main>
+<section class="relative min-h-[90vh] lg:min-h-screen flex items-center overflow-hidden bg-warm-beige/20">
+<div class="absolute inset-0 z-0 opacity-40">
+<div class="absolute top-0 left-0 w-3/5 h-3/5 bg-gradient-to-br from-warm-beige to-vibrant-orange/50 rounded-full filter blur-3xl animate-pulse-slow"></div>
+<div class="absolute bottom-0 right-0 w-2/5 h-2/5 bg-gradient-to-tl from-deep-burnt-orange/50 to-dark-forest-green/30 rounded-full filter blur-3xl animate-pulse-slow" style="animation-delay: 2s;"></div>
+</div>
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid lg:grid-cols-5 gap-8 items-center">
+<div class="lg:col-span-3 text-center lg:text-left">
+<h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold font-heading text-dark-forest-green leading-tight tracking-tight">Purpose-driven brands, <br class="hidden lg:block"/> built to <span class="text-vibrant-orange">perform.</span></h1>
+<p class="mt-6 text-xl md:text-2xl text-dark-forest-green/80 font-body max-w-2xl mx-auto lg:mx-0 leading-relaxed">Strategies and stories that turn attention into growth — branding, content, PR, and digital campaigns.</p>
+<div class="mt-10 flex flex-wrap gap-4 justify-center lg:justify-start">
+<a href="contact.html" class="px-8 py-4 bg-vibrant-orange text-white text-lg font-semibold rounded-full hover:bg-deep-burnt-orange transition-all duration-300 transform hover:scale-105 shadow-lg shadow-vibrant-orange/40">Book a Strategy Call</a>
+<a href="insights.html" class="px-8 py-4 bg-transparent border-2 border-dark-forest-green text-dark-forest-green font-semibold rounded-full hover:bg-dark-forest-green hover:text-white transition-colors duration-300">See Case Studies</a>
+</div>
+</div>
+<div class="lg:col-span-2 relative h-96 lg:h-[500px]">
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-full h-full">
+<img alt="Abstract art representing growth and transformation" class="w-full h-full object-cover mix-blend-multiply opacity-90" src="assets/images/hero-image.png"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-background-light marquee-container overflow-hidden relative">
+<div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background-light to-transparent z-10"></div>
+<div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background-light to-transparent z-10"></div>
+<div class="text-center mb-12">
+<h3 class="text-lg font-semibold text-dark-forest-green/70 tracking-widest uppercase">Trusted by industry leaders &amp; featured in</h3>
+</div>
+<div class="flex animate-marquee">
+<div class="flex-shrink-0 flex items-center justify-around w-full gap-20 lg:gap-28 px-10">
+<div class="logo-frame">
+<img alt="Client Logo 1" class="h-16 md:h-20 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLUl-9EkK2usPn99lQF6iaRF56b7YRkRT1bcqELETsok7ALmD2IE7Ze__vEUa1b9GhRAzq7RwePJVFuVY2jtP8zUoFdJ8sbo5kFKwsk7n5wPgid9Ozl75_4-fd4WWJ9ZS19eKosADRCnQDMGGYa_ZiEPLLty2Ox7louceZM0RlMMIkITCqXrFcgQ5zz5vp25magh00sYExjZ0dd6Tsmi227QuwVQl48E9OVEsU3T-vGOQjXfCpe2ZEXkV-B-2_a-qj_hPeoPPyyYA"/>
+</div>
+<div class="logo-frame">
+<img alt="Client Logo 2" class="h-16 md:h-20 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARyXWtQd2PBXJO3h4zzUSJQ99JZtiWp92LKWs921-1sKIS71tZPncsU7UpmaQcIVZGbXgWz3JYk8sm37KmL-wFFG6KUqW3t7he27w7q1ccsgD_7GPn5cudkfbZPIfIcQBvn_tLKdYuAacG5X6NlEbUtGFgsENdHdD4Dx1etmVKS0r7bdwU_WJxdL0XdC-EHACI4CMAfiaB3ILXCNuPYqSdoBTVuwuwDCCYdVrj0IvXKK1EvvwHnVQUlL6wgK3hZE8yWwywe8gfTj0"/>
+</div>
+<div class="logo-frame">
+<img alt="Press Logo 1" class="h-14 md:h-16 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArzgasSXaGIvqWeoS0t8u7ozWGKob-zmLvaKUYXlZgX3Xu4949Wk0Ui5sRk7m1jiKOpYCamqYT5svG5CDR8fc7syrXjjlVMtope2EhwM4KWu6o3Wdg4nPF_erssmkxp6Smp-3qdjQqFl7iD1hH9pDaDFvg4K7zqaZgSnCuBPVZdqXFzWgC8Y8WpetUsjS2LrwpG5suw0rTxvJxeGGgE5ih-8K27j6Sjuo38s8x-GHV5GoM9HmSDjRJj1Uli8KrY-13PWnRKbK-u-4"/>
+</div>
+<div class="logo-frame">
+<img alt="Client Logo 3" class="h-20 md:h-24 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH5XpHO-yGd940w6FjT1tz302zBdBx8JjSy_ErEi096N74sADlpf4BFiDJw0dYgTo97ppoMjYF1HvfaTxdSob3omi4joMA8xZLcuBg897vAzxgyvrk-E5d1uS8tXlQPDjl-SjdD_-nJA0R-LeT_NGWlIECk5dYiRDXYzqwJZnogZubgA2fAaQk-IID0CW4J73DzEUjZ2T474ufpJbhzOHZFzFcG9vhfH8ZbpRTmGPtfFA8n4HUYnrOmz8dfajKcnaF8LPB0L74qqo"/>
+</div>
+<div class="logo-frame">
+<img alt="Press Logo 2" class="h-16 md:h-20 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2e0RHnAfzhMn848OG5COPeIDunIn-SU0YDG9-seCpWNmbInosvkvyW-Y_L1snDAoeYBWgGF8yOWg8EZ5VCIvTCPukMSc9LdgiuE9thcHtIUqt97LFK3bn9rMwZjBzug2QwsJelgz9NvUWPQyAs4TqmCqbtowQ_9RTSOP_JhB7IutvJ8-d7laTLk1o1U7zNA1OXMhDJKCRMOd54qTp9t8W3_e6o6eaMhMJIs6-cB7FA9lAWMQqPXysQ7274PGXf_ZXviKLbg4j5oo"/>
+</div>
+</div>
+<div class="flex-shrink-0 flex items-center justify-around w-full gap-20 lg:gap-28 px-10">
+<div class="logo-frame">
+<img alt="Client Logo 1" class="h-16 md:h-20 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLUl-9EkK2usPn99lQF6iaRF56b7YRkRT1bcqELETsok7ALmD2IE7Ze__vEUa1b9GhRAzq7RwePJVFuVY2jtP8zUoFdJ8sbo5kFKwsk7n5wPgid9Ozl75_4-fd4WWJ9ZS19eKosADRCnQDMGGYa_ZiEPLLty2Ox7louceZM0RlMMIkITCqXrFcgQ5zz5vp25magh00sYExjZ0dd6Tsmi227QuwVQl48E9OVEsU3T-vGOQjXfCpe2ZEXkV-B-2_a-qj_hPeoPPyyYA"/>
+</div>
+<div class="logo-frame">
+<img alt="Client Logo 2" class="h-16 md:h-20 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARyXWtQd2PBXJO3h4zzUSJQ99JZtiWp92LKWs921-1sKIS71tZPncsU7UpmaQcIVZGbXgWz3JYk8sm37KmL-wFFG6KUqW3t7he27w7q1ccsgD_7GPn5cudkfbZPIfIcQBvn_tLKdYuAacG5X6NlEbUtGFgsENdHdD4Dx1etmVKS0r7bdwU_WJxdL0XdC-EHACI4CMAfiaB3ILXCNuPYqSdoBTVuwuwDCCYdVrj0IvXKK1EvvwHnVQUlL6wgK3hZE8yWwywe8gfTj0"/>
+</div>
+<div class="logo-frame">
+<img alt="Press Logo 1" class="h-14 md:h-16 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArzgasSXaGIvqWeoS0t8u7ozWGKob-zmLvaKUYXlZgX3Xu4949Wk0Ui5sRk7m1jiKOpYCamqYT5svG5CDR8fc7syrXjjlVMtope2EhwM4KWu6o3Wdg4nPF_erssmkxp6Smp-3qdjQqFl7iD1hH9pDaDFvg4K7zqaZgSnCuBPVZdqXFzWgC8Y8WpetUsjS2LrwpG5suw0rTxvJxeGGgE5ih-8K27j6Sjuo38s8x-GHV5GoM9HmSDjRJj1Uli8KrY-13PWnRKbK-u-4"/>
+</div>
+<div class="logo-frame">
+<img alt="Client Logo 3" class="h-20 md:h-24 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH5XpHO-yGd940w6FjT1tz302zBdBx8JjSy_ErEi096N74sADlpf4BFiDJw0dYgTo97ppoMjYF1HvfaTxdSob3omi4joMA8xZLcuBg897vAzxgyvrk-E5d1uS8tXlQPDjl-SjdD_-nJA0R-LeT_NGWlIECk5dYiRDXYzqwJZnogZubgA2fAaQk-IID0CW4J73DzEUjZ2T474ufpJbhzOHZFzFcG9vhfH8ZbpRTmGPtfFA8n4HUYnrOmz8dfajKcnaF8LPB0L74qqo"/>
+</div>
+<div class="logo-frame">
+<img alt="Press Logo 2" class="h-16 md:h-20 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2e0RHnAfzhMn848OG5COPeIDunIn-SU0YDG9-seCpWNmbInosvkvyW-Y_L1snDAoeYBWgGF8yOWg8EZ5VCIvTCPukMSc9LdgiuE9thcHtIUqt97LFK3bn9rMwZjBzug2QwsJelgz9NvUWPQyAs4TqmCqbtowQ_9RTSOP_JhB7IutvJ8-d7laTLk1o1U7zNA1OXMhDJKCRMOd54qTp9t8W3_e6o6eaMhMJIs6-cB7FA9lAWMQqPXysQ7274PGXf_ZXviKLbg4j5oo"/>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+<div class="bg-warm-beige/60 p-8 rounded-xl transform -rotate-2 hover:rotate-0 transition-transform duration-300">
+<h3 class="text-2xl font-bold font-heading text-dark-forest-green">Elevate Brand Awareness</h3>
+<p class="mt-3 text-base text-dark-forest-green/80 font-body">Crafting memorable brand identities that resonate and stand out.</p>
+</div>
+<div class="bg-vibrant-orange/20 p-8 rounded-xl transform rotate-2 hover:rotate-0 transition-transform duration-300 mt-8 sm:mt-0">
+<h3 class="text-2xl font-bold font-heading text-deep-burnt-orange">Grow Organic Reach</h3>
+<p class="mt-3 text-base text-deep-burnt-orange/80 font-body">Building engaging content ecosystems that attract and retain audiences.</p>
+</div>
+<div class="bg-dark-forest-green/10 p-8 rounded-xl transform -rotate-1 hover:rotate-0 transition-transform duration-300">
+<h3 class="text-2xl font-bold font-heading text-dark-forest-green">Secure Media Coverage</h3>
+<p class="mt-3 text-base text-dark-forest-green/80 font-body">Landing impactful stories in top-tier media outlets.</p>
+</div>
+<div class="bg-warm-beige p-8 rounded-xl transform rotate-1 hover:rotate-0 transition-transform duration-300 mt-8 sm:mt-0">
+<h3 class="text-2xl font-bold font-heading text-deep-burnt-orange">Drive Digital Engagement</h3>
+<p class="mt-3 text-base text-deep-burnt-orange/80 font-body">Creating campaigns that spark conversations and conversions.</p>
+</div>
+</div>
+<div class="lg:pl-12">
+<h2 class="text-4xl md:text-5xl font-bold font-heading text-dark-forest-green leading-tight">We help small-to-mid purposeful brands make a big impact.</h2>
+<p class="mt-6 text-lg text-dark-forest-green/80 font-body leading-relaxed">At social.i, we're more than just a consultancy; we're your strategic partner in building a brand that not only looks good but performs exceptionally. We blend purpose with performance, turning your brand's unique story into tangible growth.</p>
+</div>
+</div>
+</section>
+<section class="py-24 container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-end mb-12">
+<h2 class="text-4xl md:text-5xl font-bold font-heading text-dark-forest-green">Our Work in Action</h2>
+<a class="text-vibrant-orange font-semibold text-lg hover:underline transition-all duration-300 group" href="insights.html">See All Case Studies <span class="inline-block transform group-hover:translate-x-1 transition-transform">→</span></a>
+</div>
+<div class="space-y-24">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="relative group">
+<div class="absolute -inset-2 bg-warm-beige rounded-xl transform -rotate-1 group-hover:rotate-0 transition-transform duration-500"></div>
+<img alt="Case Study 1" class="relative rounded-xl w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEtn0ApxX__IGcrd0Gggmp37PCgZYWE7J5jeVrGDKrVnrVUFN_hFZ468_9FjaMXCEE3DZZ4WPXddmWLkZT3cIOTNEYm0PB-GBt9lQzvKAgoVhkOWzcBTEOJSVmxP_hVbSB4ZKi1-zzuLR6jINk5DdvWCFBIweQhprIiZUeGHSGvpjvDD4yyrMvdG5SWVLGPENB1KlVdg8oZYwcVSNdLmRZIxmGP4Vy0kcuQCIFKjdKJjaUMmtPd2nELvAIx_ELkQbQ0ae0kruICvo"/>
+</div>
+<div>
+<p class="text-vibrant-orange font-semibold">Tech Startup</p>
+<h3 class="mt-2 text-3xl font-bold font-heading text-dark-forest-green">FutureForward Rebrand</h3>
+<p class="mt-4 text-lg font-body text-dark-forest-green/80">A complete brand overhaul that led to a 150% increase in lead generation and secured Series A funding.</p>
+<p class="mt-4 text-2xl font-bold text-deep-burnt-orange font-heading">+300% Organic Traffic</p>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="md:order-2 relative group">
+<div class="absolute -inset-2 bg-vibrant-orange/20 rounded-xl transform rotate-1 group-hover:rotate-0 transition-transform duration-500"></div>
+<img alt="Case Study 2" class="relative rounded-xl w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwQh7fz0yFMgQxb7b6MiEQDS2WW3PRle2bshSUvM-sUJd3hl5PHeCVUV54FgPHkpyvsFo-EoxtKIWu7Sne7c4TOV5RwugUllMNztJ9aGBpadroLPnUJwSsEdXUlgyg13359HyKiJ8wnt-epr3lcb5ECL3HX4RyyFddb_i8QvK2ntPy6aK2Ax7RKlC9lfdh7_pj4fRANqwjGeEaoHIyezyoOE0dSYMcs1szV4gaOzCpJ0XGmq3ZxfSdBckYdqbuP76ayoBgcm_r5-s"/>
+</div>
+<div class="md:order-1">
+<p class="text-vibrant-orange font-semibold">Sustainable Fashion</p>
+<h3 class="mt-2 text-3xl font-bold font-heading text-dark-forest-green">EarthTones Campaign</h3>
+<p class="mt-4 text-lg font-body text-dark-forest-green/80">An omnichannel campaign that boosted social engagement by 80% and was featured in Vogue.</p>
+<p class="mt-4 text-2xl font-bold text-deep-burnt-orange font-heading">5M+ Impressions</p>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-dark-forest-green text-background-light rounded-2xl p-12 md:p-20 my-24 relative overflow-hidden container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="absolute -top-20 -right-20 w-64 h-64 bg-vibrant-orange/20 rounded-full opacity-50 blur-2xl"></div>
+<div class="absolute -bottom-20 -left-20 w-64 h-64 bg-warm-beige/20 rounded-full opacity-50 blur-2xl"></div>
+<div class="relative z-10 max-w-2xl mx-auto text-center">
+<h2 class="text-4xl md:text-5xl font-bold font-heading text-white">Ready to grow your brand?</h2>
+<p class="mt-6 text-lg font-body text-warm-beige/80 leading-relaxed">Let's craft a strategy that aligns with your purpose and drives exceptional results. Your journey to brand excellence starts here.</p>
+<div class="mt-10">
+<a href="contact.html" class="inline-block px-8 py-4 bg-vibrant-orange text-white text-lg font-semibold rounded-full hover:bg-deep-burnt-orange transition-all duration-300 transform hover:scale-105">Let's Talk Strategy</a>
+</div>
+</div>
+</section>
+<section class="py-16 container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto">
+<h2 class="text-4xl md:text-5xl font-bold font-heading text-dark-forest-green">What Our Partners Say</h2>
+</div>
+<div class="mt-16 relative">
+<div class="w-full">
+<div class="bg-warm-beige/40 p-8 md:p-12 rounded-2xl relative max-w-4xl mx-auto">
+<div class="absolute top-0 left-0 -mt-6 -ml-6 text-warm-beige/80">
+<svg fill="none" height="65" viewBox="0 0 80 65" width="80" xmlns="http://www.w3.org/2000/svg">
+<path d="M29.3333 65C23.4667 65 18.2333 63.0583 13.6333 59.175C9.03333 55.2917 6.13333 50.1583 4.93333 43.775C3.73333 37.3917 3.55 29.8333 4.38333 21.1L15.3333 2.8C16.8 0.933333 18.55 -1.1697e-06 20.5833 -1.1697e-06C22.25 -1.1697e-06 23.6333 0.583333 24.7333 1.75C25.8333 2.91667 26.3833 4.29167 26.3833 5.875L22.6333 20.35C22.2667 21.65 21.85 22.7667 21.3833 23.7C20.9167 24.55 20.45 25.1333 19.9833 25.45C19.5167 25.7667 19.1333 25.85 18.8333 25.7C19.8 30.1 21.5 33.65 23.9333 36.35C26.3667 39.05 29.3333 40.4 32.8333 40.4L29.3333 65ZM69.3333 65C63.4667 65 58.2333 63.0583 53.6333 59.175C49.0333 55.2917 46.1333 50.1583 44.9333 43.775C43.7333 37.3917 43.55 29.8333 44.3833 21.1L55.3333 2.8C56.8 0.933333 58.55 -1.1697e-06 60.5833 -1.1697e-06C62.25 -1.1697e-06 63.6333 0.583333 64.7333 1.75C65.8333 2.91667 66.3833 4.29167 66.3833 5.875L62.6333 20.35C62.2667 21.65 61.85 22.7667 61.3833 23.7C60.9167 24.55 60.45 25.1333 59.9833 25.45C59.5167 25.7667 59.1333 25.85 58.8333 25.7C59.8 30.1 61.5 33.65 63.9333 36.35C66.3667 39.05 69.3333 40.4 72.8333 40.4L69.3333 65Z" fill="currentColor"></path>
+</svg>
+</div>
+<div class="flex flex-col md:flex-row items-center gap-8">
+<img class="w-32 h-32 md:w-48 md:h-48 rounded-full object-cover border-4 border-white shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaQUsDDI-tcZ7kqIVxvruSAgEfR2VPZQjBh_9TZQS1PGOi6IOe5rXobVkEVYm4JHaCrpMJ59gi0HAA65JeBSObTiY5OoZ6pFRI598c4wCMEowasB3gbSZOOJKKDLm4978zpvzSBZ5NYd8wPTDov2_5W-WUmo7kJGHP0xeuWXnJaKjntx1krRCdBBNQxs6FJoCreoffm7TbfeX3f2DhOCXyNs-1JGg2322_wbps3XNMuNNVgbDG38YjDfqvK5tNc_3a5ewjDWM2W2I"/>
+<div class="text-center md:text-left">
+<blockquote class="text-xl md:text-2xl font-medium text-dark-forest-green leading-relaxed">"social.i didn't just give us a new look, they gave us a new voice. Their process is insightful, collaborative, and genuinely transformative. We've never felt more aligned with our purpose."</blockquote>
+<cite class="mt-6 block font-bold text-lg font-heading text-vibrant-orange">Aisha Khan</cite>
+<span class="text-base text-dark-forest-green/70">Founder, OrganiCare</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-vibrant-orange/10 rounded-2xl p-8 md:p-16 flex flex-col lg:flex-row items-center gap-12">
+<div class="lg:w-1/2">
+<h2 class="text-3xl md:text-4xl font-bold font-heading text-deep-burnt-orange">Get Purpose-Driven Insights</h2>
+<p class="mt-4 text-lg font-body text-deep-burnt-orange/80">Join our newsletter for exclusive content on brand strategy, storytelling, and sustainable growth. No spam, just value.</p>
+</div>
+<div class="lg:w-1/2 w-full">
+<form class="flex flex-col sm:flex-row gap-4">
+<input class="flex-grow px-5 py-4 rounded-full border-warm-beige focus:ring-vibrant-orange focus:border-vibrant-orange text-lg font-body" placeholder="Your Email Address" type="email"/>
+<button class="px-8 py-4 bg-vibrant-orange text-white text-lg font-semibold rounded-full hover:bg-deep-burnt-orange transition-all duration-300 transform hover:scale-105" type="submit">Subscribe</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-dark-forest-green text-background-light/90 font-body">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+<div class="grid md:grid-cols-4 gap-12">
+<div>
+<h3 class="text-2xl font-bold font-heading text-white">social.i</h3>
+<p class="mt-4 text-sm text-warm-beige/70">Purpose-driven brands, built to perform.</p>
+<div class="flex mt-6 space-x-4">
+<a class="text-warm-beige/70 hover:text-vibrant-orange" href="#">
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+</svg>
+</a>
+<a class="text-warm-beige/70 hover:text-vibrant-orange" href="#">
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+<path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+</svg>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-semibold text-lg text-white font-heading">Explore</h4>
+<ul class="mt-4 space-y-3">
+<li><a class="text-sm text-warm-beige/70 hover:text-vibrant-orange" href="services.html">Services</a></li>
+<li><a class="text-sm text-warm-beige/70 hover:text-vibrant-orange" href="insights.html">Case Studies</a></li>
+<li><a class="text-sm text-warm-beige/70 hover:text-vibrant-orange" href="about.html">About Us</a></li>
+<li><a class="text-sm text-warm-beige/70 hover:text-vibrant-orange" href="insights.html">Blog</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-semibold text-lg text-white font-heading">Say Hello</h4>
+<ul class="mt-4 space-y-3">
+<li><a class="text-sm text-warm-beige/70 hover:text-vibrant-orange" href="mailto:hello@socialiconsultancy.com">hello@socialiconsultancy.com</a></li>
+<li><span class="text-sm text-warm-beige/70">Southeast Asia</span></li>
+</ul>
+</div>
+<div>
+<h4 class="font-semibold text-lg text-white font-heading">Legal</h4>
+<ul class="mt-4 space-y-3">
+<li><a class="text-sm text-warm-beige/70 hover:text-vibrant-orange" href="#">Privacy Policy</a></li>
+<li><a class="text-sm text-warm-beige/70 hover:text-vibrant-orange" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-12 border-t border-warm-beige/20 pt-8 text-center text-sm text-warm-beige/60">
+<p>© 2024 social.i Consultancy. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</div>
 
-    <!-- Header & Navigation -->
-    <header class="sticky top-0 z-50 bg-background-light/80 backdrop-blur-lg border-b border-warm-beige/50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex h-24 items-center justify-between">
-                <div class="flex items-center gap-3">
-                    <div class="text-vibrant-orange w-10 h-10">
-                        <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z" fill="currentColor"></path>
-                            <path clip-rule="evenodd" d="M7.24189 26.4066C7.31369 26.4411 7.64204 26.5637 8.52504 26.3738C9.59462 26.1438 11.0343 25.5311 12.7183 24.4963C14.7583 23.2426 17.0256 21.4503 19.238 19.238C21.4503 17.0256 23.2426 14.7583 24.4963 12.7183C25.5311 11.0343 26.1438 9.59463 26.3738 8.52504C26.5637 7.64204 26.4411 7.31369 26.4066 7.24189C26.345 7.21246 26.143 7.14535 25.6664 7.1918C24.9745 7.25925 23.9954 7.5498 22.7699 8.14278C20.3369 9.32007 17.3369 11.4915 14.4142 14.4142C11.4915 17.3369 9.32007 20.3369 8.14278 22.7699C7.5498 23.9954 7.25925 24.9745 7.1918 25.6664C7.14534 26.143 7.21246 26.345 7.24189 26.4066ZM29.9001 10.7285C29.4519 12.0322 28.7617 13.4172 27.9042 14.8126C26.465 17.1544 24.4686 19.6641 22.0664 22.0664C19.6641 24.4686 17.1544 26.465 14.8126 27.9042C13.4172 28.7617 12.0322 29.4519 10.7285 29.9001L21.5754 40.747C21.6001 40.7606 21.8995 40.931 22.8729 40.7217C23.9424 40.4916 25.3821 39.879 27.0661 38.8441C29.1062 37.5904 31.3734 35.7982 33.5858 33.5858C35.7982 31.3734 37.5904 29.1062 38.8441 27.0661C39.879 25.3821 40.4916 23.9425 40.7216 22.8729C40.931 21.8995 40.7606 21.6001 40.747 21.5754L29.9001 10.7285ZM29.2403 4.41187L43.5881 18.7597C44.9757 20.1473 44.9743 22.1235 44.6322 23.7139C44.2714 25.3919 43.4158 27.2666 42.252 29.1604C40.8128 31.5022 38.8165 34.012 36.4142 36.4142C34.012 38.8165 31.5022 40.8128 29.1604 42.252C27.2666 43.4158 25.3919 44.2714 23.7139 44.6322C22.1235 44.9743 20.1473 44.9757 18.7597 43.5881L4.41187 29.2403C3.29027 28.1187 3.08209 26.5973 3.21067 25.2783C3.34099 23.9415 3.8369 22.4852 4.54214 21.0277C5.96129 18.0948 8.43335 14.7382 11.5858 11.5858C14.7382 8.43335 18.0948 5.9613 21.0277 4.54214C22.4852 3.8369 23.9415 3.34099 25.2783 3.21067C26.5973 3.08209 28.1187 3.29028 29.2403 4.41187Z" fill="currentColor" fill-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                    <h2 class="text-3xl font-bold font-heading text-dark-forest-green">social.i</h2>
-                </div>
-                <nav class="hidden md:flex items-center gap-10">
-                    <a class="font-medium text-lg text-dark-forest-green/80 hover:text-vibrant-orange transition-colors" href="services.html">Services</a>
-                    <a class="font-medium text-lg text-dark-forest-green/80 hover:text-vibrant-orange transition-colors" href="insights.html">Case Studies</a>
-                    <a class="font-medium text-lg text-dark-forest-green/80 hover:text-vibrant-orange transition-colors" href="about.html">About</a>
-                    <a class="font-medium text-lg text-dark-forest-green/80 hover:text-vibrant-orange transition-colors" href="contact.html">Contact</a>
-                </nav>
-                <button class="hidden md:flex items-center justify-center px-6 py-3 bg-vibrant-orange text-white text-base font-semibold rounded-full hover:bg-deep-burnt-orange transition-all duration-300 transform hover:scale-105">
-                    <a href="contact.html">Book a Strategy Call</a>
-                </button>
-                <button class="mobile-menu-toggle md:hidden text-dark-forest-green">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-            <!-- Mobile Menu -->
-            <nav class="nav-links md:hidden hidden flex-col gap-4 pb-4">
-                <a class="text-sm font-medium text-dark-forest-green/80 hover:text-vibrant-orange transition-colors px-4 py-2" href="index.html">Home</a>
-                <a class="text-sm font-medium text-dark-forest-green/80 hover:text-vibrant-orange transition-colors px-4 py-2" href="services.html">Services</a>
-                <a class="text-sm font-medium text-dark-forest-green/80 hover:text-vibrant-orange transition-colors px-4 py-2" href="about.html">About</a>
-                <a class="text-sm font-medium text-dark-forest-green/80 hover:text-vibrant-orange transition-colors px-4 py-2" href="insights.html">Case Studies</a>
-                <a class="text-sm font-medium text-dark-forest-green/80 hover:text-vibrant-orange transition-colors px-4 py-2" href="contact.html">Contact</a>
-                <a href="contact.html" class="mx-4 px-5 py-2.5 bg-vibrant-orange text-white text-sm font-bold rounded-full hover:bg-deep-burnt-orange text-center">Book a Strategy Call</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24">
-        <!-- Hero Section with Gradient Blobs -->
-        <section class="relative text-center overflow-hidden">
-            <div class="absolute -top-40 -left-40 w-96 h-96 bg-warm-beige/50 rounded-full blur-3xl opacity-50"></div>
-            <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-vibrant-orange/20 rounded-full blur-3xl opacity-50"></div>
-            <div class="relative z-10 max-w-4xl mx-auto">
-                <h1 class="text-5xl md:text-7xl font-extrabold font-heading text-dark-forest-green leading-tight tracking-tight">Purpose-driven brands, built to perform.</h1>
-                <p class="mt-6 text-xl text-dark-forest-green/80 font-body max-w-3xl mx-auto leading-relaxed">Strategies and stories that turn attention into growth — branding, content, PR, and digital campaigns.</p>
-                <div class="mt-10 flex flex-wrap gap-4 justify-center">
-                    <button class="px-8 py-4 bg-vibrant-orange text-white text-lg font-semibold rounded-full hover:bg-deep-burnt-orange transition-all duration-300 transform hover:scale-105">
-                        <a href="contact.html">Book a Strategy Call</a>
-                    </button>
-                    <button class="px-8 py-4 bg-transparent border-2 border-vibrant-orange text-vibrant-orange font-semibold rounded-full hover:bg-vibrant-orange hover:text-white transition-colors duration-300">
-                        <a href="insights.html">See Case Studies</a>
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Client Logos -->
-        <section class="py-24 mt-16">
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-12 gap-x-8 items-center justify-items-center">
-                <img alt="Client Logo 1" class="h-8 object-contain transition-transform duration-300 hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLUl-9EkK2usPn99lQF6iaRF56b7YRkRT1bcqELETsok7ALmD2IE7Ze__vEUa1b9GhRAzq7RwePJVFuVY2jtP8zUoFdJ8sbo5kFKwsk7n5wPgid9Ozl75_4-fd4WWJ9ZS19eKosADRCnQDMGGYa_ZiEPLLty2Ox7louceZM0RlMMIkITCqXrFcgQ5zz5vp25magh00sYExjZ0dd6Tsmi227QuwVQl48E9OVEsU3T-vGOQjXfCpe2ZEXkV-B-2_a-qj_hPeoPPyyYA"/>
-                <img alt="Client Logo 2" class="h-8 object-contain transition-transform duration-300 hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARyXWtQd2PBXJO3h4zzUSJQ99JZtiWp92LKWs921-1sKIS71tZPncsU7UpmaQcIVZGbXgWz3JYk8sm37KmL-wFFG6KUqW3t7he27w7q1ccsgD_7GPn5cudkfbZPIfIcQBvn_tLKdYuAacG5X6NlEbUtGFgsENdHdD4Dx1etmVKS0r7bdwU_WJxdL0XdC-EHACI4CMAfiaB3ILXCNuPYqSdoBTVuwuwDCCYdVrj0IvXKK1EvvwHnVQUlL6wgK3hZE8yWwywe8gfTj0"/>
-                <img alt="Client Logo 3" class="h-8 object-contain transition-transform duration-300 hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArzgasSXaGIvqWeoS0t8u7ozWGKob-zmLvaKUYXlZgX3Xu4949Wk0Ui5sRk7m1jiKOpYCamqYT5svG5CDR8fc7syrXjjlVMtope2EhwM4KWu6o3Wdg4nPF_erssmkxp6Smp-3qdjQqFl7iD1hH9pDaDFvg4K7zqaZgSnCuBPVZdqXFzWgC8Y8WpetUsjS2LrwpG5suw0rTxvJxeGGgE5ih-8K27j6Sjuo38s8x-GHV5GoM9HmSDjRJj1Uli8KrY-13PWnRKbK-u-4"/>
-                <img alt="Client Logo 4" class="h-8 object-contain transition-transform duration-300 hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH5XpHO-yGd940w6FjT1tz302zBdBx8JjSy_ErEi096N74sADlpf4BFiDJw0dYgTo97ppoMjYF1HvfaTxdSob3omi4joMA8xZLcuBg897vAzxgyvrk-E5d1uS8tXlQPDjl-SjdD_-nJA0R-LeT_NGWlIECk5dYiRDXYzqwJZnogZubgA2fAaQk-IID0CW4J73DzEUjZ2T474ufpJbhzOHZFzFcG9vhfH8ZbpRTmGPtfFA8n4HUYnrOmz8dfajKcnaF8LPB0L74qqo"/>
-                <img alt="Client Logo 5" class="h-10 object-contain transition-transform duration-300 hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2e0RHnAfzhMn848OG5COPeIDunIn-SU0YDG9-seCpWNmbInosvkvyW-Y_L1snDAoeYBWgGF8yOWg8EZ5VCIvTCPukMSc9LdgiuE9thcHtIUqt97LFK3bn9rMwZjBzug2QwsJelgz9NvUWPQyAs4TqmCqbtowQ_9RTSOP_JhB7IutvJ8-d7laTLk1o1U7zNA1OXMhDJKCRMOd54qTp9t8W3_e6o6eaMhMJIs6-cB7FA9lAWMQqPXysQ7274PGXf_ZXviKLbg4j5oo"/>
-            </div>
-        </section>
-
-        <!-- What We Do Section with Rotated Cards -->
-        <section class="py-16">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                    <div class="bg-warm-beige/60 p-8 rounded-xl transform -rotate-2 hover:rotate-0 transition-transform duration-300">
-                        <h3 class="text-2xl font-bold font-heading text-dark-forest-green">Elevate Brand Awareness</h3>
-                        <p class="mt-3 text-base text-dark-forest-green/80 font-body">Crafting memorable brand identities that resonate and stand out.</p>
-                    </div>
-                    <div class="bg-vibrant-orange/20 p-8 rounded-xl transform rotate-2 hover:rotate-0 transition-transform duration-300 mt-8 sm:mt-0">
-                        <h3 class="text-2xl font-bold font-heading text-deep-burnt-orange">Grow Organic Reach</h3>
-                        <p class="mt-3 text-base text-deep-burnt-orange/80 font-body">Building engaging content ecosystems that attract and retain audiences.</p>
-                    </div>
-                    <div class="bg-dark-forest-green/10 p-8 rounded-xl transform -rotate-1 hover:rotate-0 transition-transform duration-300">
-                        <h3 class="text-2xl font-bold font-heading text-dark-forest-green">Secure Media Coverage</h3>
-                        <p class="mt-3 text-base text-dark-forest-green/80 font-body">Landing impactful stories in top-tier media outlets.</p>
-                    </div>
-                    <div class="bg-warm-beige p-8 rounded-xl transform rotate-1 hover:rotate-0 transition-transform duration-300 mt-8 sm:mt-0">
-                        <h3 class="text-2xl font-bold font-heading text-deep-burnt-orange">Drive Digital Engagement</h3>
-                        <p class="mt-3 text-base text-deep-burnt-orange/80 font-body">Creating campaigns that spark conversations and conversions.</p>
-                    </div>
-                </div>
-                <div class="lg:pl-12">
-                    <h2 class="text-4xl md:text-5xl font-bold font-heading text-dark-forest-green leading-tight">We help small-to-mid purposeful brands make a big impact.</h2>
-                    <p class="mt-6 text-lg text-dark-forest-green/80 font-body leading-relaxed">At social.i, we're more than just a consultancy; we're your strategic partner in building a brand that not only looks good but performs exceptionally. We blend purpose with performance, turning your brand's unique story into tangible growth.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Case Studies with Alternating Layout -->
-        <section class="py-24">
-            <div class="flex justify-between items-end mb-12">
-                <h2 class="text-4xl md:text-5xl font-bold font-heading text-dark-forest-green">Our Work in Action</h2>
-                <a class="text-vibrant-orange font-semibold text-lg hover:underline transition-all duration-300 group" href="insights.html">See All Case Studies <span class="inline-block transform group-hover:translate-x-1 transition-transform">→</span></a>
-            </div>
-            <div class="space-y-24">
-                <!-- Case Study 1 -->
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="relative group">
-                        <div class="absolute -inset-2 bg-warm-beige rounded-xl transform -rotate-1 group-hover:rotate-0 transition-transform duration-500"></div>
-                        <img alt="Case Study 1" class="relative rounded-xl w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEtn0ApxX__IGcrd0Gggmp37PCgZYWE7J5jeVrGDKrVnrVUFN_hFZ468_9FjaMXCEE3DZZ4WPXddmWLkZT3cIOTNEYm0PB-GBt9lQzvKAgoVhkOWzcBTEOJSVmxP_hVbSB4ZKi1-zzuLR6jINk5DdvWCFBIweQhprIiZUeGHSGvpjvDD4yyrMvdG5SWVLGPENB1KlVdg8oZYwcVSNdLmRZIxmGP4Vy0kcuQCIFKjdKJjaUMmtPd2nELvAIx_ELkQbQ0ae0kruICvo"/>
-                    </div>
-                    <div>
-                        <p class="text-vibrant-orange font-semibold">Tech Startup</p>
-                        <h3 class="mt-2 text-3xl font-bold font-heading text-dark-forest-green">FutureForward Rebrand</h3>
-                        <p class="mt-4 text-lg font-body text-dark-forest-green/80">A complete brand overhaul that led to a 150% increase in lead generation and secured Series A funding.</p>
-                        <p class="mt-4 text-2xl font-bold text-deep-burnt-orange font-heading">+300% Organic Traffic</p>
-                    </div>
-                </div>
-
-                <!-- Case Study 2 -->
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="md:order-2 relative group">
-                        <div class="absolute -inset-2 bg-vibrant-orange/20 rounded-xl transform rotate-1 group-hover:rotate-0 transition-transform duration-500"></div>
-                        <img alt="Case Study 2" class="relative rounded-xl w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwQh7fz0yFMgQxb7b6MiEQDS2WW3PRle2bshSUvM-sUJd3hl5PHeCVUV54FgPHkpyvsFo-EoxtKIWu7Sne7c4TOV5RwugUllMNztJ9aGBpadroLPnUJwSsEdXUlgyg13359HyKiJ8wnt-epr3lcb5ECL3HX4RyyFddb_i8QvK2ntPy6aK2Ax7RKlC9lfdh7_pj4fRANqwjGeEaoHIyezyoOE0dSYMcs1szV4gaOzCpJ0XGmq3ZxfSdBckYdqbuP76ayoBgcm_r5-s"/>
-                    </div>
-                    <div class="md:order-1">
-                        <p class="text-vibrant-orange font-semibold">Sustainable Fashion</p>
-                        <h3 class="mt-2 text-3xl font-bold font-heading text-dark-forest-green">EarthTones Campaign</h3>
-                        <p class="mt-4 text-lg font-body text-dark-forest-green/80">An omnichannel campaign that boosted social engagement by 80% and was featured in Vogue.</p>
-                        <p class="mt-4 text-2xl font-bold text-deep-burnt-orange font-heading">5M+ Impressions</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section with Dark Background -->
-        <section class="bg-dark-forest-green text-background-light rounded-2xl p-12 md:p-20 my-24 relative overflow-hidden">
-            <div class="absolute -top-20 -right-20 w-64 h-64 bg-vibrant-orange/20 rounded-full opacity-50 blur-2xl"></div>
-            <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-warm-beige/20 rounded-full opacity-50 blur-2xl"></div>
-            <div class="relative z-10 max-w-2xl mx-auto text-center">
-                <h2 class="text-4xl md:text-5xl font-bold font-heading text-white">Ready to grow your brand?</h2>
-                <p class="mt-6 text-lg font-body text-warm-beige/80 leading-relaxed">Let's craft a strategy that aligns with your purpose and drives exceptional results. Your journey to brand excellence starts here.</p>
-                <div class="mt-10">
-                    <button class="px-8 py-4 bg-vibrant-orange text-white text-lg font-semibold rounded-full hover:bg-deep-burnt-orange transition-all duration-300 transform hover:scale-105">
-                        <a href="contact.html">Let's Talk Strategy</a>
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials - Featured Single -->
-        <section class="py-16">
-            <div class="text-center max-w-3xl mx-auto">
-                <h2 class="text-4xl md:text-5xl font-bold font-heading text-dark-forest-green">What Our Partners Say</h2>
-            </div>
-            <div class="mt-16 relative">
-                <div class="w-full">
-                    <div class="bg-warm-beige/40 p-8 md:p-12 rounded-2xl relative max-w-4xl mx-auto">
-                        <div class="absolute top-0 left-0 -mt-6 -ml-6 text-warm-beige/80">
-                            <svg fill="none" height="65" viewBox="0 0 80 65" width="80" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M29.3333 65C23.4667 65 18.2333 63.0583 13.6333 59.175C9.03333 55.2917 6.13333 50.1583 4.93333 43.775C3.73333 37.3917 3.55 29.8333 4.38333 21.1L15.3333 2.8C16.8 0.933333 18.55 -1.1697e-06 20.5833 -1.1697e-06C22.25 -1.1697e-06 23.6333 0.583333 24.7333 1.75C25.8333 2.91667 26.3833 4.29167 26.3833 5.875L22.6333 20.35C22.2667 21.65 21.85 22.7667 21.3833 23.7C20.9167 24.55 20.45 25.1333 19.9833 25.45C19.5167 25.7667 19.1333 25.85 18.8333 25.7C19.8 30.1 21.5 33.65 23.9333 36.35C26.3667 39.05 29.3333 40.4 32.8333 40.4L29.3333 65ZM69.3333 65C63.4667 65 58.2333 63.0583 53.6333 59.175C49.0333 55.2917 46.1333 50.1583 44.9333 43.775C43.7333 37.3917 43.55 29.8333 44.3833 21.1L55.3333 2.8C56.8 0.933333 58.55 -1.1697e-06 60.5833 -1.1697e-06C62.25 -1.1697e-06 63.6333 0.583333 64.7333 1.75C65.8333 2.91667 66.3833 4.29167 66.3833 5.875L62.6333 20.35C62.2667 21.65 61.85 22.7667 61.3833 23.7C60.9167 24.55 60.45 25.1333 59.9833 25.45C59.5167 25.7667 59.1333 25.85 58.8333 25.7C59.8 30.1 61.5 33.65 63.9333 36.35C66.3667 39.05 69.3333 40.4 72.8333 40.4L69.3333 65Z" fill="currentColor"></path>
-                            </svg>
-                        </div>
-                        <div class="flex flex-col md:flex-row items-center gap-8">
-                            <img class="w-32 h-32 md:w-48 md:h-48 rounded-full object-cover border-4 border-white shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaQUsDDI-tcZ7kqIVxvruSAgEfR2VPZQjBh_9TZQS1PGOi6IOe5rXobVkEVYm4JHaCrpMJ59gi0HAA65JeBSObTiY5OoZ6pFRI598c4wCMEowasB3gbSZOOJKKDLm4978zpvzSBZ5NYd8wPTDov2_5W-WUmo7kJGHP0xeuWXnJaKjntx1krRCdBBNQxs6FJoCreoffm7TbfeX3f2DhOCXyNs-1JGg2322_wbps3XNMuNNVgbDG38YjDfqvK5tNc_3a5ewjDWM2W2I"/>
-                            <div class="text-center md:text-left">
-                                <blockquote class="text-xl md:text-2xl font-medium text-dark-forest-green leading-relaxed">"social.i didn't just give us a new look, they gave us a new voice. Their process is insightful, collaborative, and genuinely transformative. We've never felt more aligned with our purpose."</blockquote>
-                                <cite class="mt-6 block font-bold text-lg font-heading text-vibrant-orange">Aisha Khan</cite>
-                                <span class="text-base text-dark-forest-green/70">Founder, OrganiCare</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Newsletter Section -->
-        <section class="py-16">
-            <div class="bg-vibrant-orange/10 rounded-2xl p-8 md:p-16 flex flex-col lg:flex-row items-center gap-12">
-                <div class="lg:w-1/2">
-                    <h2 class="text-3xl md:text-4xl font-bold font-heading text-deep-burnt-orange">Get Purpose-Driven Insights</h2>
-                    <p class="mt-4 text-lg font-body text-deep-burnt-orange/80">Join our newsletter for exclusive content on brand strategy, storytelling, and sustainable growth. No spam, just value.</p>
-                </div>
-                <div class="lg:w-1/2 w-full">
-                    <form class="flex flex-col sm:flex-row gap-4">
-                        <input class="flex-grow px-5 py-4 rounded-full border-warm-beige focus:ring-vibrant-orange focus:border-vibrant-orange text-lg font-body" placeholder="Your Email Address" type="email"/>
-                        <button class="px-8 py-4 bg-vibrant-orange text-white text-lg font-semibold rounded-full hover:bg-deep-burnt-orange transition-all duration-300 transform hover:scale-105" type="submit">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-dark-forest-green text-background-light/90 font-body">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div class="grid md:grid-cols-4 gap-12">
-                <div>
-                    <h3 class="text-2xl font-bold font-heading text-white">social.i</h3>
-                    <p class="mt-4 text-sm text-warm-beige/70">Purpose-driven brands, built to perform.</p>
-                    <div class="flex mt-6 space-x-4">
-                        <a class="text-warm-beige/70 hover:text-vibrant-orange" href="#">
-                            <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
-                            </svg>
-                        </a>
-                        <a class="text-warm-beige/70 hover:text-vibrant-orange" href="#">
-                            <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="font-semibold text-lg text-white font-heading">Explore</h4>
-                    <ul class="mt-4 space-y-3">
-                        <li><a class="text-sm text-warm-beige/70 hover:text-vibrant-orange" href="services.html">Services</a></li>
-                        <li><a class="text-sm text-warm-beige/70 hover:text-vibrant-orange" href="insights.html">Case Studies</a></li>
-                        <li><a class="text-sm text-warm-beige/70 hover:text-vibrant-orange" href="about.html">About Us</a></li>
-                        <li><a class="text-sm text-warm-beige/70 hover:text-vibrant-orange" href="insights.html">Blog</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold text-lg text-white font-heading">Say Hello</h4>
-                    <ul class="mt-4 space-y-3">
-                        <li><a class="text-sm text-warm-beige/70 hover:text-vibrant-orange" href="mailto:hello@socialiconsultancy.com">hello@socialiconsultancy.com</a></li>
-                        <li><span class="text-sm text-warm-beige/70">Southeast Asia</span></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold text-lg text-white font-heading">Legal</h4>
-                    <ul class="mt-4 space-y-3">
-                        <li><a class="text-sm text-warm-beige/70 hover:text-vibrant-orange" href="#">Privacy Policy</a></li>
-                        <li><a class="text-sm text-warm-beige/70 hover:text-vibrant-orange" href="#">Terms of Service</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="mt-12 border-t border-warm-beige/20 pt-8 text-center text-sm text-warm-beige/60">
-                <p>© 2024 social.i Consultancy. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="assets/js/main.js"></script>
-</body>
-</html>
+<script src="assets/js/main.js"></script>
+</body></html>
