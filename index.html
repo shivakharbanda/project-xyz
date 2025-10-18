@@ -38,7 +38,7 @@
                 transform: 'translateX(0%)'
               },
               '100%': {
-                transform: 'translateX(-100%)'
+                transform: 'translateX(-50%)'
               },
             },
             "pulse-slow": {
@@ -85,6 +85,29 @@
     }
     .logo-frame:hover {
       transform: scale(1.05);
+    }
+    .service-card {
+      transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      position: relative;
+      z-index: 1;
+    }
+    .service-card:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+      z-index: 10;
+    }
+    .service-card-icon {
+      transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    .service-card:hover .service-card-icon {
+      transform: rotate(-15deg) scale(1.1);
+    }
+    .contact-option-link {
+      transition: all 0.3s ease;
+    }
+    .contact-option-link:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
     }
   </style>
 </head>
@@ -159,65 +182,154 @@
 <h3 class="text-lg font-semibold text-dark-forest-green/70 tracking-widest uppercase">Trusted by industry leaders &amp; featured in</h3>
 </div>
 <div class="flex animate-marquee">
-<div class="flex-shrink-0 flex items-center gap-8 md:gap-16 lg:gap-20 px-10">
+<div class="flex-shrink-0 flex items-center gap-12 md:gap-20 px-10">
 <div class="logo-frame">
-<img alt="Client Logo 1" class="h-16 md:h-20 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLUl-9EkK2usPn99lQF6iaRF56b7YRkRT1bcqELETsok7ALmD2IE7Ze__vEUa1b9GhRAzq7RwePJVFuVY2jtP8zUoFdJ8sbo5kFKwsk7n5wPgid9Ozl75_4-fd4WWJ9ZS19eKosADRCnQDMGGYa_ZiEPLLty2Ox7louceZM0RlMMIkITCqXrFcgQ5zz5vp25magh00sYExjZ0dd6Tsmi227QuwVQl48E9OVEsU3T-vGOQjXfCpe2ZEXkV-B-2_a-qj_hPeoPPyyYA"/>
+<img alt="Client logo 1" class="h-16 md:h-20 w-auto object-contain transition-transform duration-300" src="assets/images/clientele/3c19e2_24f3f5f7b4f14d9ca50dcb708d85fcec~mv2.png"/>
 </div>
 <div class="logo-frame">
-<img alt="Client Logo 2" class="h-16 md:h-20 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARyXWtQd2PBXJO3h4zzUSJQ99JZtiWp92LKWs921-1sKIS71tZPncsU7UpmaQcIVZGbXgWz3JYk8sm37KmL-wFFG6KUqW3t7he27w7q1ccsgD_7GPn5cudkfbZPIfIcQBvn_tLKdYuAacG5X6NlEbUtGFgsENdHdD4Dx1etmVKS0r7bdwU_WJxdL0XdC-EHACI4CMAfiaB3ILXCNuPYqSdoBTVuwuwDCCYdVrj0IvXKK1EvvwHnVQUlL6wgK3hZE8yWwywe8gfTj0"/>
+<img alt="Client logo 2" class="h-16 md:h-20 w-auto object-contain transition-transform duration-300" src="assets/images/clientele/3c19e2_16596d72b7ad4079b704cf7bfba85fe3~mv2.jpeg"/>
 </div>
 <div class="logo-frame">
-<img alt="Press Logo 1" class="h-14 md:h-16 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArzgasSXaGIvqWeoS0t8u7ozWGKob-zmLvaKUYXlZgX3Xu4949Wk0Ui5sRk7m1jiKOpYCamqYT5svG5CDR8fc7syrXjjlVMtope2EhwM4KWu6o3Wdg4nPF_erssmkxp6Smp-3qdjQqFl7iD1hH9pDaDFvg4K7zqaZgSnCuBPVZdqXFzWgC8Y8WpetUsjS2LrwpG5suw0rTxvJxeGGgE5ih-8K27j6Sjuo38s8x-GHV5GoM9HmSDjRJj1Uli8KrY-13PWnRKbK-u-4"/>
+<img alt="Client logo 3" class="h-16 md:h-20 w-auto object-contain transition-transform duration-300" src="assets/images/clientele/3c19e2_f29a4593a49b47e5bb8a223a53f69828~mv2.png"/>
 </div>
 <div class="logo-frame">
-<img alt="Client Logo 3" class="h-20 md:h-24 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH5XpHO-yGd940w6FjT1tz302zBdBx8JjSy_ErEi096N74sADlpf4BFiDJw0dYgTo97ppoMjYF1HvfaTxdSob3omi4joMA8xZLcuBg897vAzxgyvrk-E5d1uS8tXlQPDjl-SjdD_-nJA0R-LeT_NGWlIECk5dYiRDXYzqwJZnogZubgA2fAaQk-IID0CW4J73DzEUjZ2T474ufpJbhzOHZFzFcG9vhfH8ZbpRTmGPtfFA8n4HUYnrOmz8dfajKcnaF8LPB0L74qqo"/>
+<img alt="Client logo 4" class="h-16 md:h-20 w-auto object-contain transition-transform duration-300" src="assets/images/clientele/b33177_662d662944b94e8382fe43b8bb298d3b~mv2.png"/>
 </div>
 <div class="logo-frame">
-<img alt="Press Logo 2" class="h-16 md:h-20 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2e0RHnAfzhMn848OG5COPeIDunIn-SU0YDG9-seCpWNmbInosvkvyW-Y_L1snDAoeYBWgGF8yOWg8EZ5VCIvTCPukMSc9LdgiuE9thcHtIUqt97LFK3bn9rMwZjBzug2QwsJelgz9NvUWPQyAs4TqmCqbtowQ_9RTSOP_JhB7IutvJ8-d7laTLk1o1U7zNA1OXMhDJKCRMOd54qTp9t8W3_e6o6eaMhMJIs6-cB7FA9lAWMQqPXysQ7274PGXf_ZXviKLbg4j5oo"/>
-</div>
-</div>
-<div class="flex-shrink-0 flex items-center gap-8 md:gap-16 lg:gap-20 px-10">
-<div class="logo-frame">
-<img alt="Client Logo 1" class="h-16 md:h-20 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLUl-9EkK2usPn99lQF6iaRF56b7YRkRT1bcqELETsok7ALmD2IE7Ze__vEUa1b9GhRAzq7RwePJVFuVY2jtP8zUoFdJ8sbo5kFKwsk7n5wPgid9Ozl75_4-fd4WWJ9ZS19eKosADRCnQDMGGYa_ZiEPLLty2Ox7louceZM0RlMMIkITCqXrFcgQ5zz5vp25magh00sYExjZ0dd6Tsmi227QuwVQl48E9OVEsU3T-vGOQjXfCpe2ZEXkV-B-2_a-qj_hPeoPPyyYA"/>
+<img alt="Client logo 5" class="h-16 md:h-20 w-auto object-contain transition-transform duration-300" src="assets/images/clientele/3c19e2_6dcca48d8cee41668e112e4b15b58a88~mv2.jpeg"/>
 </div>
 <div class="logo-frame">
-<img alt="Client Logo 2" class="h-16 md:h-20 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARyXWtQd2PBXJO3h4zzUSJQ99JZtiWp92LKWs921-1sKIS71tZPncsU7UpmaQcIVZGbXgWz3JYk8sm37KmL-wFFG6KUqW3t7he27w7q1ccsgD_7GPn5cudkfbZPIfIcQBvn_tLKdYuAacG5X6NlEbUtGFgsENdHdD4Dx1etmVKS0r7bdwU_WJxdL0XdC-EHACI4CMAfiaB3ILXCNuPYqSdoBTVuwuwDCCYdVrj0IvXKK1EvvwHnVQUlL6wgK3hZE8yWwywe8gfTj0"/>
+<img alt="Client logo 6" class="h-16 md:h-20 w-auto object-contain transition-transform duration-300" src="assets/images/clientele/b33177_fd0e20cff68a41a9955967bb573f26c8~mv2.jpeg"/>
 </div>
 <div class="logo-frame">
-<img alt="Press Logo 1" class="h-14 md:h-16 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArzgasSXaGIvqWeoS0t8u7ozWGKob-zmLvaKUYXlZgX3Xu4949Wk0Ui5sRk7m1jiKOpYCamqYT5svG5CDR8fc7syrXjjlVMtope2EhwM4KWu6o3Wdg4nPF_erssmkxp6Smp-3qdjQqFl7iD1hH9pDaDFvg4K7zqaZgSnCuBPVZdqXFzWgC8Y8WpetUsjS2LrwpG5suw0rTxvJxeGGgE5ih-8K27j6Sjuo38s8x-GHV5GoM9HmSDjRJj1Uli8KrY-13PWnRKbK-u-4"/>
+<img alt="Client logo 7" class="h-16 md:h-20 w-auto object-contain transition-transform duration-300" src="assets/images/clientele/3c19e2_9c39540389d3457a9696deefd977eaf4~mv2.png"/>
 </div>
 <div class="logo-frame">
-<img alt="Client Logo 3" class="h-20 md:h-24 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH5XpHO-yGd940w6FjT1tz302zBdBx8JjSy_ErEi096N74sADlpf4BFiDJw0dYgTo97ppoMjYF1HvfaTxdSob3omi4joMA8xZLcuBg897vAzxgyvrk-E5d1uS8tXlQPDjl-SjdD_-nJA0R-LeT_NGWlIECk5dYiRDXYzqwJZnogZubgA2fAaQk-IID0CW4J73DzEUjZ2T474ufpJbhzOHZFzFcG9vhfH8ZbpRTmGPtfFA8n4HUYnrOmz8dfajKcnaF8LPB0L74qqo"/>
+<img alt="Client logo 8" class="h-16 md:h-20 w-auto object-contain transition-transform duration-300" src="assets/images/clientele/b33177_0f9e79fcc58c4991a249e73800326680~mv2.jpeg"/>
 </div>
 <div class="logo-frame">
-<img alt="Press Logo 2" class="h-16 md:h-20 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2e0RHnAfzhMn848OG5COPeIDunIn-SU0YDG9-seCpWNmbInosvkvyW-Y_L1snDAoeYBWgGF8yOWg8EZ5VCIvTCPukMSc9LdgiuE9thcHtIUqt97LFK3bn9rMwZjBzug2QwsJelgz9NvUWPQyAs4TqmCqbtowQ_9RTSOP_JhB7IutvJ8-d7laTLk1o1U7zNA1OXMhDJKCRMOd54qTp9t8W3_e6o6eaMhMJIs6-cB7FA9lAWMQqPXysQ7274PGXf_ZXviKLbg4j5oo"/>
+<img alt="Client logo 9" class="h-16 md:h-20 w-auto object-contain transition-transform duration-300" src="assets/images/clientele/b33177_3a8ffe5b040841f286171b53e217328c~mv2.png"/>
+</div>
+<div class="logo-frame">
+<img alt="Client logo 10" class="h-16 md:h-20 w-auto object-contain transition-transform duration-300" src="assets/images/clientele/3c19e2_b17cc0c254e546348564509e4d029468~mv2.png"/>
+</div>
+</div>
+<div class="flex-shrink-0 flex items-center gap-12 md:gap-20 px-10">
+<div class="logo-frame">
+<img alt="Client logo 1" class="h-16 md:h-20 w-auto object-contain transition-transform duration-300" src="assets/images/clientele/3c19e2_24f3f5f7b4f14d9ca50dcb708d85fcec~mv2.png"/>
+</div>
+<div class="logo-frame">
+<img alt="Client logo 2" class="h-16 md:h-20 w-auto object-contain transition-transform duration-300" src="assets/images/clientele/3c19e2_16596d72b7ad4079b704cf7bfba85fe3~mv2.jpeg"/>
+</div>
+<div class="logo-frame">
+<img alt="Client logo 3" class="h-16 md:h-20 w-auto object-contain transition-transform duration-300" src="assets/images/clientele/3c19e2_f29a4593a49b47e5bb8a223a53f69828~mv2.png"/>
+</div>
+<div class="logo-frame">
+<img alt="Client logo 4" class="h-16 md:h-20 w-auto object-contain transition-transform duration-300" src="assets/images/clientele/b33177_662d662944b94e8382fe43b8bb298d3b~mv2.png"/>
+</div>
+<div class="logo-frame">
+<img alt="Client logo 5" class="h-16 md:h-20 w-auto object-contain transition-transform duration-300" src="assets/images/clientele/3c19e2_6dcca48d8cee41668e112e4b15b58a88~mv2.jpeg"/>
+</div>
+<div class="logo-frame">
+<img alt="Client logo 6" class="h-16 md:h-20 w-auto object-contain transition-transform duration-300" src="assets/images/clientele/b33177_fd0e20cff68a41a9955967bb573f26c8~mv2.jpeg"/>
+</div>
+<div class="logo-frame">
+<img alt="Client logo 7" class="h-16 md:h-20 w-auto object-contain transition-transform duration-300" src="assets/images/clientele/3c19e2_9c39540389d3457a9696deefd977eaf4~mv2.png"/>
+</div>
+<div class="logo-frame">
+<img alt="Client logo 8" class="h-16 md:h-20 w-auto object-contain transition-transform duration-300" src="assets/images/clientele/b33177_0f9e79fcc58c4991a249e73800326680~mv2.jpeg"/>
+</div>
+<div class="logo-frame">
+<img alt="Client logo 9" class="h-16 md:h-20 w-auto object-contain transition-transform duration-300" src="assets/images/clientele/b33177_3a8ffe5b040841f286171b53e217328c~mv2.png"/>
+</div>
+<div class="logo-frame">
+<img alt="Client logo 10" class="h-16 md:h-20 w-auto object-contain transition-transform duration-300" src="assets/images/clientele/3c19e2_b17cc0c254e546348564509e4d029468~mv2.png"/>
 </div>
 </div>
 </div>
 </section>
-<section class="py-16 container mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid lg:grid-cols-2 gap-16 items-center">
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-<div class="bg-warm-beige/60 p-8 rounded-xl transform -rotate-2 hover:rotate-0 transition-transform duration-300">
-<h3 class="text-2xl font-bold font-heading text-dark-forest-green">Elevate Brand Awareness</h3>
-<p class="mt-3 text-base text-dark-forest-green/80 font-body">Crafting memorable brand identities that resonate and stand out.</p>
+<section class="py-24 bg-warm-beige/20 relative overflow-hidden">
+<div class="absolute -top-24 -left-24 w-72 h-72 bg-vibrant-orange/10 rounded-full filter blur-2xl"></div>
+<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-dark-forest-green/5 rounded-full filter blur-3xl"></div>
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+<div class="text-center max-w-3xl mx-auto">
+<p class="font-heading font-bold text-lg text-deep-burnt-orange tracking-wider">ATTENTION CAPTURED → MOMENTUM GAINED → REPUTATION EARNED</p>
+<h2 class="mt-4 text-4xl md:text-5xl font-bold font-heading text-dark-forest-green">Our Path to Your Purpose</h2>
+<p class="mt-6 text-lg text-dark-forest-green/80 font-body leading-relaxed">We provide a comprehensive suite of services to build, grow, and amplify purpose-driven brands. Each service is a building block towards creating a lasting impact.</p>
 </div>
-<div class="bg-vibrant-orange/20 p-8 rounded-xl transform rotate-2 hover:rotate-0 transition-transform duration-300 mt-8 sm:mt-0">
-<h3 class="text-2xl font-bold font-heading text-deep-burnt-orange">Grow Organic Reach</h3>
-<p class="mt-3 text-base text-deep-burnt-orange/80 font-body">Building engaging content ecosystems that attract and retain audiences.</p>
+<div class="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+<div class="service-card group">
+<a class="block bg-white p-8 rounded-xl h-full flex flex-col border-2 border-transparent hover:border-vibrant-orange transition-colors duration-300" href="services.html">
+<div class="flex-shrink-0">
+<div class="service-card-icon w-16 h-16 bg-vibrant-orange/10 rounded-lg flex items-center justify-center mb-6">
+<svg class="w-9 h-9 text-vibrant-orange" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M2.5 12a.5.5 0 0 1 .5-.5h18a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path><path d="M12 2.5a.5.5 0 0 1 .5.5v18a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z"></path><path d="m8.646 8.646.707-.707a.5.5 0 0 1 .708 0l6.364 6.364a.5.5 0 0 1 0 .707l-.707.707a.5.5 0 0 1-.708 0L8.646 9.354a.5.5 0 0 1 0-.708z"></path><path d="m8.646 15.354 6.364-6.364a.5.5 0 0 1 .708 0l.707.707a.5.5 0 0 1 0 .708l-6.364 6.364a.5.5 0 0 1-.708 0l-.707-.707a.5.5 0 0 1 0-.708z"></path></svg>
 </div>
-<div class="bg-dark-forest-green/10 p-8 rounded-xl transform -rotate-1 hover:rotate-0 transition-transform duration-300">
-<h3 class="text-2xl font-bold font-heading text-dark-forest-green">Secure Media Coverage</h3>
-<p class="mt-3 text-base text-dark-forest-green/80 font-body">Landing impactful stories in top-tier media outlets.</p>
+<h3 class="text-2xl font-bold font-heading text-dark-forest-green">Brand Strategy</h3>
 </div>
-<div class="bg-warm-beige p-8 rounded-xl transform rotate-1 hover:rotate-0 transition-transform duration-300 mt-8 sm:mt-0">
-<h3 class="text-2xl font-bold font-heading text-deep-burnt-orange">Drive Digital Engagement</h3>
-<p class="mt-3 text-base text-deep-burnt-orange/80 font-body">Creating campaigns that spark conversations and conversions.</p>
+<p class="mt-4 text-dark-forest-green/80 font-body flex-grow">Defining your unique position, crafting compelling messaging, and establishing a voice that resonates.</p>
+<div class="mt-6 font-semibold text-deep-burnt-orange group-hover:underline">Explore Strategy <span class="inline-block transform group-hover:translate-x-1 transition-transform">→</span></div>
+</a>
 </div>
+<div class="service-card group lg:mt-12">
+<a class="block bg-dark-forest-green text-white p-8 rounded-xl h-full flex flex-col border-2 border-transparent hover:border-warm-beige transition-colors duration-300" href="services.html">
+<div class="flex-shrink-0">
+<div class="service-card-icon w-16 h-16 bg-warm-beige/20 rounded-lg flex items-center justify-center mb-6">
+<svg class="w-9 h-9 text-warm-beige" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
 </div>
-<div class="lg:pl-12">
-<h2 class="text-4xl md:text-5xl font-bold font-heading text-dark-forest-green leading-tight">We help small-to-mid purposeful brands make a big impact.</h2>
-<p class="mt-6 text-lg text-dark-forest-green/80 font-body leading-relaxed">At social.i, we're more than just a consultancy; we're your strategic partner in building a brand that not only looks good but performs exceptionally. We blend purpose with performance, turning your brand's unique story into tangible growth.</p>
+<h3 class="text-2xl font-bold font-heading text-white">Visual Identity</h3>
+</div>
+<p class="mt-4 text-warm-beige/80 font-body flex-grow">Creating a memorable logo, comprehensive brand guidelines, and collateral that captures your essence.</p>
+<div class="mt-6 font-semibold text-warm-beige group-hover:underline">Explore Identity <span class="inline-block transform group-hover:translate-x-1 transition-transform">→</span></div>
+</a>
+</div>
+<div class="service-card group">
+<a class="block bg-white p-8 rounded-xl h-full flex flex-col border-2 border-transparent hover:border-vibrant-orange transition-colors duration-300" href="services.html">
+<div class="flex-shrink-0">
+<div class="service-card-icon w-16 h-16 bg-vibrant-orange/10 rounded-lg flex items-center justify-center mb-6">
+<svg class="w-9 h-9 text-vibrant-orange" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+</div>
+<h3 class="text-2xl font-bold font-heading text-dark-forest-green">Content Creation</h3>
+</div>
+<p class="mt-4 text-dark-forest-green/80 font-body flex-grow">Developing a robust content strategy and producing engaging social media assets, photos, and videos.</p>
+<div class="mt-6 font-semibold text-deep-burnt-orange group-hover:underline">Explore Content <span class="inline-block transform group-hover:translate-x-1 transition-transform">→</span></div>
+</a>
+</div>
+<div class="service-card group lg:-mt-12">
+<a class="block bg-white p-8 rounded-xl h-full flex flex-col border-2 border-transparent hover:border-vibrant-orange transition-colors duration-300" href="services.html">
+<div class="flex-shrink-0">
+<div class="service-card-icon w-16 h-16 bg-vibrant-orange/10 rounded-lg flex items-center justify-center mb-6">
+<svg class="w-9 h-9 text-vibrant-orange" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
+</div>
+<h3 class="text-2xl font-bold font-heading text-dark-forest-green">Digital Marketing</h3>
+</div>
+<p class="mt-4 text-dark-forest-green/80 font-body flex-grow">Driving growth through SEO, paid ads, email marketing, and authentic influencer partnerships.</p>
+<div class="mt-6 font-semibold text-deep-burnt-orange group-hover:underline">Explore Marketing <span class="inline-block transform group-hover:translate-x-1 transition-transform">→</span></div>
+</a>
+</div>
+<div class="service-card group lg:mt-6">
+<a class="block bg-vibrant-orange text-white p-8 rounded-xl h-full flex flex-col border-2 border-transparent hover:border-deep-burnt-orange transition-colors duration-300" href="services.html">
+<div class="flex-shrink-0">
+<div class="service-card-icon w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mb-6">
+<svg class="w-9 h-9 text-white" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm-8.27 4a2 2 0 0 1-3.46 0"></path></svg>
+</div>
+<h3 class="text-2xl font-bold font-heading text-white">Public Relations</h3>
+</div>
+<p class="mt-4 text-background-light/80 font-body flex-grow">Building your reputation with strategic media relations, thought leadership, and compelling press materials.</p>
+<div class="mt-6 font-semibold text-background-light group-hover:underline">Explore PR <span class="inline-block transform group-hover:translate-x-1 transition-transform">→</span></div>
+</a>
+</div>
+<div class="service-card group lg:-mt-12">
+<a class="block bg-white p-8 rounded-xl h-full flex flex-col border-2 border-transparent hover:border-vibrant-orange transition-colors duration-300" href="services.html">
+<div class="flex-shrink-0">
+<div class="service-card-icon w-16 h-16 bg-dark-forest-green/10 rounded-lg flex items-center justify-center mb-6">
+<svg class="w-9 h-9 text-dark-forest-green" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line><line x1="10" x2="8" y1="9" y2="9"></line></svg>
+</div>
+<h3 class="text-2xl font-bold font-heading text-dark-forest-green">Brand Campaigns</h3>
+</div>
+<p class="mt-4 text-dark-forest-green/80 font-body flex-grow">Launching integrated campaigns that captivate audiences and drive measurable, impactful results.</p>
+<div class="mt-6 font-semibold text-deep-burnt-orange group-hover:underline">Explore Campaigns <span class="inline-block transform group-hover:translate-x-1 transition-transform">→</span></div>
+</a>
+</div>
 </div>
 </div>
 </section>
@@ -235,8 +347,8 @@
 <div>
 <p class="text-vibrant-orange font-semibold">Tech Startup</p>
 <h3 class="mt-2 text-3xl font-bold font-heading text-dark-forest-green">FutureForward Rebrand</h3>
-<p class="mt-4 text-lg font-body text-dark-forest-green/80">A complete brand overhaul that led to a 150% increase in lead generation and secured Series A funding.</p>
-<p class="mt-4 text-2xl font-bold text-deep-burnt-orange font-heading">+300% Organic Traffic</p>
+<p class="mt-4 text-lg font-body text-dark-forest-green/80">A complete brand positioning strategy that supported their successful Series A funding round.</p>
+<p class="mt-4 text-2xl font-bold text-deep-burnt-orange font-heading">50+ Enterprise Partnerships</p>
 </div>
 </div>
 <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -247,20 +359,117 @@
 <div class="md:order-1">
 <p class="text-vibrant-orange font-semibold">Sustainable Fashion</p>
 <h3 class="mt-2 text-3xl font-bold font-heading text-dark-forest-green">EarthTones Campaign</h3>
-<p class="mt-4 text-lg font-body text-dark-forest-green/80">An omnichannel campaign that boosted social engagement by 80% and was featured in Vogue.</p>
+<p class="mt-4 text-lg font-body text-dark-forest-green/80">An integrated brand campaign featured in Vogue and 15+ major publications.</p>
 <p class="mt-4 text-2xl font-bold text-deep-burnt-orange font-heading">5M+ Impressions</p>
 </div>
 </div>
 </div>
 </section>
-<section class="bg-dark-forest-green text-background-light rounded-2xl p-12 md:p-20 my-24 relative overflow-hidden container mx-auto px-4 sm:px-6 lg:px-8">
+<section class="py-24 md:py-32 bg-warm-beige/20 overflow-hidden">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto">
+<h2 class="text-4xl md:text-5xl font-bold font-heading text-dark-forest-green">How We Work</h2>
+<p class="mt-6 text-lg text-dark-forest-green/80 font-body leading-relaxed">A focused, four-step approach that takes your brand from insight to impact.</p>
+</div>
+<div class="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
+<div class="process-card bg-background-light p-6 rounded-xl border border-warm-beige/50 shadow-sm flex flex-col items-center text-center">
+<div class="p-4 bg-vibrant-orange/10 rounded-full mb-4">
+<div class="p-3 bg-vibrant-orange text-white rounded-full">
+<svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+<h3 class="text-xl font-bold font-heading text-dark-forest-green">1. Discovery &amp; Strategy</h3>
+<p class="mt-3 text-dark-forest-green/80 text-base">We dig deep to understand your vision, audience, and market landscape, crafting a strategic roadmap for success.</p>
+</div>
+<div class="process-card bg-background-light p-6 rounded-xl border border-warm-beige/50 shadow-sm flex flex-col items-center text-center">
+<div class="p-4 bg-dark-forest-green/10 rounded-full mb-4">
+<div class="p-3 bg-dark-forest-green text-white rounded-full">
+<svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.5L15.232 5.232z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+<h3 class="text-xl font-bold font-heading text-dark-forest-green">2. Brand Identity Design</h3>
+<p class="mt-3 text-dark-forest-green/80 text-base">We create a compelling visual identity—logo, color palette, typography—that truly represents your brand's essence.</p>
+</div>
+<div class="process-card bg-background-light p-6 rounded-xl border border-warm-beige/50 shadow-sm flex flex-col items-center text-center">
+<div class="p-4 bg-vibrant-orange/10 rounded-full mb-4">
+<div class="p-3 bg-vibrant-orange text-white rounded-full">
+<svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+<h3 class="text-xl font-bold font-heading text-dark-forest-green">3. Messaging &amp; Storytelling</h3>
+<p class="mt-3 text-dark-forest-green/80 text-base">We craft a powerful narrative and key messages that resonate with your audience and articulate your unique value.</p>
+</div>
+<div class="process-card bg-background-light p-6 rounded-xl border border-warm-beige/50 shadow-sm flex flex-col items-center text-center">
+<div class="p-4 bg-dark-forest-green/10 rounded-full mb-4">
+<div class="p-3 bg-dark-forest-green text-white rounded-full">
+<svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+<h3 class="text-xl font-bold font-heading text-dark-forest-green">4. Launch &amp; Implementation</h3>
+<p class="mt-3 text-dark-forest-green/80 text-base">We bring your brand to life across all touchpoints, from digital platforms to marketing campaigns, ensuring a seamless launch.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-dark-forest-green text-background-light rounded-2xl py-12 md:py-20 my-24 relative overflow-hidden container mx-auto px-4 sm:px-6 lg:px-8">
 <div class="absolute -top-20 -right-20 w-64 h-64 bg-vibrant-orange/20 rounded-full opacity-50 blur-2xl"></div>
 <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-warm-beige/20 rounded-full opacity-50 blur-2xl"></div>
-<div class="relative z-10 max-w-2xl mx-auto text-center">
+<div class="relative z-10 text-center">
 <h2 class="text-4xl md:text-5xl font-bold font-heading text-white">Ready to grow your brand?</h2>
-<p class="mt-6 text-lg font-body text-warm-beige/80 leading-relaxed">Let's craft a strategy that aligns with your purpose and drives exceptional results. Your journey to brand excellence starts here.</p>
-<div class="mt-10">
+<p class="mt-6 text-lg font-body text-warm-beige/80 leading-relaxed max-w-2xl mx-auto">Let's craft a strategy that aligns with your purpose and drives exceptional results. Your journey to brand excellence starts here.</p>
+<div class="mt-10 mb-12">
 <a href="contact.html" class="inline-block px-8 py-4 bg-vibrant-orange text-white text-lg font-semibold rounded-full hover:bg-deep-burnt-orange transition-all duration-300 transform hover:scale-105">Let's Talk Strategy</a>
+</div>
+<div class="max-w-4xl mx-auto pt-10 border-t border-warm-beige/20">
+<p class="text-lg font-semibold text-warm-beige mb-6">More ways to connect</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<a class="contact-option-link group bg-white/10 p-4 rounded-lg flex items-center space-x-4" href="contact.html">
+<div class="p-3 bg-vibrant-orange rounded-full">
+<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<p class="font-semibold text-white">Contact Form</p>
+<p class="text-sm text-warm-beige/80">Quickest way to reach us</p>
+</div>
+</a>
+<a class="contact-option-link group bg-white/10 p-4 rounded-lg flex items-center space-x-4" href="mailto:hello@socialiconsultancy.com">
+<div class="p-3 bg-warm-beige rounded-full">
+<svg class="w-6 h-6 text-dark-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<p class="font-semibold text-white">Email Us</p>
+<p class="text-sm text-warm-beige/80">hello@socialiconsultancy.com</p>
+</div>
+</a>
+<a class="contact-option-link group bg-white/10 p-4 rounded-lg flex items-center space-x-4" href="tel:+12345678900">
+<div class="p-3 bg-vibrant-orange rounded-full">
+<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<p class="font-semibold text-white">+1 (234) 567-890</p>
+<p class="text-sm text-warm-beige/80">Call Mon-Fri, 9am-5pm EST</p>
+</div>
+</a>
+</div>
+<div class="mt-6 flex justify-center items-center space-x-6">
+<a class="text-warm-beige/80 hover:text-vibrant-orange transition-colors" href="#">
+<svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+<span class="sr-only">LinkedIn</span>
+</a>
+<a class="text-warm-beige/80 hover:text-vibrant-orange transition-colors" href="#">
+<svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.585-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.585-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.585.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.058 1.644-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.059 1.689.073 4.948.073s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"></path></svg>
+<span class="sr-only">Instagram</span>
+</a>
+</div>
 </div>
 </div>
 </section>
