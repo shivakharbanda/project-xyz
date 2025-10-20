@@ -158,3 +158,103 @@ document.querySelectorAll('.service-card, .value-item, .step').forEach(el => {
   el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
   observer.observe(el);
 });
+
+// Animated Counters with Color Transition (Red → Yellow → Green)
+function interpolateColor(progress) {
+  // Red: rgb(239, 68, 68) - #EF4444
+  // Yellow: rgb(245, 158, 11) - #F59E0B
+  // Green: rgb(16, 185, 129) - #10B981
+
+  let r, g, b;
+
+  if (progress < 0.5) {
+    // Red to Yellow (0-50%)
+    const localProgress = progress * 2; // 0 to 1
+    r = Math.round(239 + (245 - 239) * localProgress);
+    g = Math.round(68 + (158 - 68) * localProgress);
+    b = Math.round(68 + (11 - 68) * localProgress);
+  } else {
+    // Yellow to Green (50-100%)
+    const localProgress = (progress - 0.5) * 2; // 0 to 1
+    r = Math.round(245 + (16 - 245) * localProgress);
+    g = Math.round(158 + (185 - 158) * localProgress);
+    b = Math.round(11 + (129 - 11) * localProgress);
+  }
+
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+function easeOutCubic(t) {
+  return 1 - Math.pow(1 - t, 3);
+}
+
+function formatNumber(number, target, prefix, suffix) {
+  // Handle large numbers (millions)
+  if (target >= 1000000) {
+    const millions = (number / 1000000).toFixed(1);
+    return `${prefix}${millions}M${suffix}`;
+  }
+
+  // Handle regular numbers with commas for thousands
+  if (target >= 1000 && !suffix.includes('%')) {
+    return `${prefix}${Math.round(number).toLocaleString()}${suffix}`;
+  }
+
+  // Handle percentages and smaller numbers
+  return `${prefix}${Math.round(number)}${suffix}`;
+}
+
+function animateCounter(element) {
+  const target = parseFloat(element.getAttribute('data-target'));
+  const prefix = element.getAttribute('data-prefix') || '';
+  const suffix = element.getAttribute('data-suffix') || '';
+  const duration = 2500; // 2.5 seconds
+  const startTime = performance.now();
+
+  function updateCounter(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const easedProgress = easeOutCubic(progress);
+
+    const currentValue = target * easedProgress;
+
+    // Update the number
+    element.textContent = formatNumber(currentValue, target, prefix, suffix);
+
+    // Update the color
+    element.style.color = interpolateColor(progress);
+
+    if (progress < 1) {
+      requestAnimationFrame(updateCounter);
+    } else {
+      // Ensure final value is exact
+      element.textContent = formatNumber(target, target, prefix, suffix);
+      element.style.color = interpolateColor(1);
+    }
+  }
+
+  requestAnimationFrame(updateCounter);
+}
+
+// Intersection Observer for Counters
+const counterObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const counter = entry.target;
+
+      // Only animate once
+      if (!counter.hasAttribute('data-animated')) {
+        counter.setAttribute('data-animated', 'true');
+        animateCounter(counter);
+      }
+    }
+  });
+}, {
+  threshold: 0.3,
+  rootMargin: '0px 0px -100px 0px'
+});
+
+// Observe all counter elements
+document.querySelectorAll('.counter').forEach(counter => {
+  counterObserver.observe(counter);
+});
